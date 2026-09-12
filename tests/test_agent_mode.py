@@ -77,18 +77,20 @@ def test_a_gate_stage_may_not_be_ingested_as_a_step(studio, tmp_path):
     assert SPECS[Stage.B4_SCRIPT_REVIEW].records_step is False
 
 
-def test_mock_mode_never_waits_on_an_agent(studio, tmp_path):
-    """The invariant M1 could have broken: mock runs stay unattended.
+def test_mock_mode_walks_every_stage_unattended(tmp_path, studio):
+    """M0's acceptance, and the invariant M1 could have broken.
 
-    The mock walk still stops at LOCK 3, on two findings that predate M1 and are
-    logged as DEBT-003 and DEBT-004 — the point here is that it stops there and
-    not at a judgement stage.
+    This stopped at B9 between commits ff509e7 and the DEBT-003/004 fix: the mono
+    fold-down check counted a BS.1770 channel-sum offset as phase cancellation,
+    and the mock held a single frame that the freeze check rightly called a
+    slideshow. B10 and B11 had no end-to-end coverage for that whole stretch.
     """
     code, out = studio("run", "--topic", "t", "--channel", "mk", "--providers", "mock",
                        "--auto-approve", "test")
+    assert code == 0 and out["ok"] is True
     assert "awaiting" not in out
-    assert out["state"] == "B8"
-    assert (tmp_path / "channels/mk/episodes/EP01/master.mp4").exists()
+    assert out["ran"][-1] == "B11"
+    assert out["verticals"] == 8
 
 
 def test_a_lock_waiting_on_a_human_is_blocked_not_failed(studio, tmp_path):

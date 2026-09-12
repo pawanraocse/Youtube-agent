@@ -41,8 +41,12 @@ class MockImage:
     def generate(self, prompt: str, out: Path, *, width: int, height: int,
                  reference: Path | None = None, lora: str | None = None) -> Path:
         out.parent.mkdir(parents=True, exist_ok=True)
-        _run(FFMPEG + ["-f", "lavfi", "-i",
-                       f"color=c={_hue(prompt)}:s={width}x{height}", "-frames:v", "1", str(out)])
+        # A grid over the deterministic colour. A flat field looks identical under
+        # any camera move, so the still must carry structure for the video stage
+        # to have something to move across — see MockVideo.animate.
+        _run(FFMPEG + ["-f", "lavfi", "-i", f"color=c={_hue(prompt)}:s={width}x{height}",
+                       "-vf", "drawgrid=w=96:h=96:t=3:color=white@0.35",
+                       "-frames:v", "1", str(out)])
         return out
 
 
@@ -50,12 +54,23 @@ class MockVideo:
     """Stands in for both parallax and AI video; the caller cannot tell which."""
 
     def animate(self, still: Path, out: Path, *, duration_ms: int, motion: str) -> Path:
+        """A slow pan, which is what parallax2d will actually do.
+
+        The mock used to hold a single frame, and `check_master` rightly called
+        that a slideshow — nothing is ever fully static in the production
+        standard. That stopped every mock walk at LOCK 3 and left B10 and B11
+        with no end-to-end coverage. A crop-and-pan costs the same as the still
+        encode it replaces (measured: 0.35 s against 0.36 s for a 3 s clip) and
+        is closer to the real renderer besides.
+        """
         out.parent.mkdir(parents=True, exist_ok=True)
+        seconds = max(duration_ms / 1000, 0.1)
+        pan = (f"crop=w=iw*0.94:h=ih*0.94:x=(iw-ow)*(t/{seconds:.3f}):y=(ih-oh)/2,"
+               "scale=trunc(iw/2)*2:trunc(ih/2)*2")
         _run(FFMPEG + ["-loop", "1", "-i", str(still),
-                       "-t", f"{duration_ms / 1000:.3f}", "-r", "24",
-                       "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
-                       "-pix_fmt", "yuv420p",
-                       "-vf", "scale=trunc(iw/2)*2:trunc(ih/2)*2", str(out)])
+                       "-t", f"{seconds:.3f}", "-r", "30",
+                       "-c:v", "libx264", "-preset", "ultrafast",
+                       "-pix_fmt", "yuv420p", "-vf", pan, str(out)])
         return out
 
 

@@ -1,0 +1,219 @@
+[
+  {
+    "beat_id": "b0",
+    "text": "cold_open of m0 acceptance, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s0"
+  },
+  {
+    "beat_id": "b0",
+    "text": "cold_open of m0 acceptance, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s0"
+  },
+  {
+    "beat_id": "b1",
+    "text": "promise of m0 acceptance, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b1",
+    "text": "promise of m0 acceptance, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b1",
+    "text": "promise of m0 acceptance, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 4. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 5. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 6. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 7. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 8. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 9. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of m0 acceptance, part 10. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 4. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 5. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 6. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 7. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 8. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of m0 acceptance, part 9. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of m0 acceptance, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of m0 acceptance, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of m0 acceptance, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of m0 acceptance, part 4. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of m0 acceptance, part 5. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b5",
+    "text": "loop of m0 acceptance, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s0"
+  },
+  {
+    "beat_id": "b5",
+    "text": "loop of m0 acceptance, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s0"
+  }
+]

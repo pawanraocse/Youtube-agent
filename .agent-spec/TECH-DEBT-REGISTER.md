@@ -9,7 +9,7 @@
 
 | ID | Date Logged | Component | Description | Severity | Fix Effort | Status |
 |----|-------------|-----------|-------------|----------|------------|--------|
-| `DEBT-001` | 2026-09-12 | `studio/checks/__init__.py` | `_loudness`, `_mono_loudness` and `_freeze_spans` (lines 168, 180, 204) call `subprocess.run` without `check=True`, then parse stderr for a JSON blob. A failed FFmpeg surfaces as `JSONDecodeError` on an empty slice, so a broken probe is indistinguishable from a bad master. | MEDIUM | Low | OPEN |
+| `DEBT-001` | 2026-09-12 | `studio/checks/__init__.py` | `_loudness`, `_mono_loudness` and `_freeze_spans` (lines 232, 244, 280 after the DEBT-003 fix) call `subprocess.run` without `check=True`, then parse stderr for a JSON blob. A failed FFmpeg surfaces as `JSONDecodeError` on an empty slice, so a broken probe is indistinguishable from a bad master. Observed live on 2026-09-12 while probing a file FFmpeg had failed to build: the traceback pointed at `json.loads`, not at the encode that actually failed. | MEDIUM | Low | OPEN |
 | `DEBT-002` | 2026-09-12 | `studio/pipeline.py`, `studio/__main__.py` | Four call sites reach into `store.conn.execute` directly instead of going through a `Store` method, leaking SQL past the boundary the rest of the code keeps clean. | LOW | Low | OPEN |
 
 ## Resolved Debt
@@ -31,31 +31,41 @@ When the agent discovers a violation of SOLID or Clean Code principles but is no
 - **MEDIUM**: Code smell, missing test coverage, or minor inefficiency.
 - **LOW**: Style violation or minor cleanup needed.
 
-## DEBT-003 — the mono fold-down check can never pass
+## DEBT-003 — RESOLVED 2026-09-12: the mono fold-down check could never pass
 
-`studio/checks/__init__.py:135` compares a master's integrated loudness against the
-loudness of its own mono downmix and flags a drop above 3.0 LU as phase cancellation.
-Measured this session on the mock master: a drop of exactly 3.0 LU on a file with no
-phase problem at all.
+`studio/checks/__init__.py` compared a master's integrated loudness against the loudness
+of its own mono downmix and flagged a drop above 3.0 LU as phase cancellation. Measured
+on real files: a dual-mono master drops exactly 3.00 LU with nothing wrong with it,
+because BS.1770 sums channel power and two identical channels carry twice the power of
+one. Every narration-led mix is close to dual mono, so the finding fired on correct
+masters and LOCK 3 could not open.
 
-The 3 LU is an artefact of BS.1770, not a defect in the mix. Two identical channels sum
-to twice the power of one, so a dual-mono stereo file always measures 3.01 LU louder
-than the same signal folded to mono. Every narration-led mix is close to dual-mono,
-which means this finding fires on correct masters and **LOCK 3 cannot currently open**.
+Fixed by subtracting the 10*log10(2) channel-sum offset and thresholding the remainder
+at 1.5 LU. The threshold is placed on measurement, not taste: dual mono leaves 0.0 LU
+after the offset, fully uncorrelated L/R leaves 2.99, and a phase-inverted pair folds to
+silence. A narration mix with a wide music bed lands near 0.7. A mono master is now
+skipped entirely rather than downmixed against a channel it has not got.
 
-The fix is to subtract the expected 3.01 LU offset before thresholding, so the check
-measures cancellation beyond the channel-count artefact. Not fixed in M1: B8–B9 belong
-to M4, and the fix needs a known-bad fixture with genuine phase inversion to prove it
-still catches the real failure.
+The check had a phase-inversion fixture all along; what was missing was the assertion
+that the *conforming* fixture produces no fold-down finding. That assertion is now in
+`test_conforming_vertical_master_passes`, alongside two new tests covering the dual-mono
+artefact and the single-channel case.
 
-## DEBT-004 — mock video is static, so B10 and B11 have no coverage
+## DEBT-004 — RESOLVED 2026-09-12: mock video was static, so B10 and B11 had no coverage
 
-`MockVideo` renders a held colour frame, which `_freeze_spans` correctly reports as 61
-frames beyond 2.5 s. The check is right and the mock is wrong. Combined with DEBT-003
-this stops every mock walk at B9, so `b10_multiply` and `b11_distribute` are exercised
-by no end-to-end run — M0's stated acceptance ("emits a placeholder master plus
-placeholder verticals") has not held since commit ff509e7 added the production
-standard, and was not re-run afterwards.
+`MockVideo` rendered a held colour frame and `MockImage` rendered a flat colour field.
+The freeze check was right and the mock was wrong. Together with DEBT-003 this stopped
+every mock walk at B9, so `b10_multiply` and `b11_distribute` were exercised by no
+end-to-end run: M0's stated acceptance had not held since commit ff509e7 added the
+production standard, and was not re-run afterwards.
 
-Fix: give `MockVideo` a slow `zoompan` so its output carries motion. Cheap, and it
-restores coverage of the last two stages.
+Fixed in both providers, because either alone was insufficient — a pan across a flat
+colour field still produces identical frames. `MockImage` now draws a grid over its
+deterministic colour, and `MockVideo` does a slow crop-and-pan at 30 fps, which is what
+`parallax2d` will actually do. Cost is nil: a crop-and-pan measured 0.35 s against 0.36 s
+for the still encode it replaced, and the full mock walk runs in 44.4 s against a 60 s
+budget, against 43.9 s recorded before the regression.
+
+M0's acceptance now passes end to end again: all fifteen stages, a master and eight
+verticals. `tests/test_agent_mode.py` asserts it, so it cannot silently lapse a second
+time.

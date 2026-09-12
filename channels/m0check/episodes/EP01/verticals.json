@@ -1,0 +1,82 @@
+[
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v00.mp4",
+    "beat_id": "b0",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: cold_open of m0 acceptance, part 1. This",
+      "facebook_reels": "Hook for facebook_reels: cold_open of m0 acceptance, part 1. This",
+      "instagram_reels": "Hook for instagram_reels: cold_open of m0 acceptance, part 1. This",
+      "tiktok": "Hook for tiktok: cold_open of m0 acceptance, part 1. This"
+    }
+  },
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v01.mp4",
+    "beat_id": "b0",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: cold_open of m0 acceptance, part 2. This",
+      "facebook_reels": "Hook for facebook_reels: cold_open of m0 acceptance, part 2. This",
+      "instagram_reels": "Hook for instagram_reels: cold_open of m0 acceptance, part 2. This",
+      "tiktok": "Hook for tiktok: cold_open of m0 acceptance, part 2. This"
+    }
+  },
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v02.mp4",
+    "beat_id": "b2",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: escalation of m0 acceptance, part 1. Thi",
+      "facebook_reels": "Hook for facebook_reels: escalation of m0 acceptance, part 1. Thi",
+      "instagram_reels": "Hook for instagram_reels: escalation of m0 acceptance, part 1. Thi",
+      "tiktok": "Hook for tiktok: escalation of m0 acceptance, part 1. Thi"
+    }
+  },
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v03.mp4",
+    "beat_id": "b2",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: escalation of m0 acceptance, part 2. Thi",
+      "facebook_reels": "Hook for facebook_reels: escalation of m0 acceptance, part 2. Thi",
+      "instagram_reels": "Hook for instagram_reels: escalation of m0 acceptance, part 2. Thi",
+      "tiktok": "Hook for tiktok: escalation of m0 acceptance, part 2. Thi"
+    }
+  },
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v04.mp4",
+    "beat_id": "b2",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: escalation of m0 acceptance, part 3. Thi",
+      "facebook_reels": "Hook for facebook_reels: escalation of m0 acceptance, part 3. Thi",
+      "instagram_reels": "Hook for instagram_reels: escalation of m0 acceptance, part 3. Thi",
+      "tiktok": "Hook for tiktok: escalation of m0 acceptance, part 3. Thi"
+    }
+  },
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v05.mp4",
+    "beat_id": "b2",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: escalation of m0 acceptance, part 4. Thi",
+      "facebook_reels": "Hook for facebook_reels: escalation of m0 acceptance, part 4. Thi",
+      "instagram_reels": "Hook for instagram_reels: escalation of m0 acceptance, part 4. Thi",
+      "tiktok": "Hook for tiktok: escalation of m0 acceptance, part 4. Thi"
+    }
+  },
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v06.mp4",
+    "beat_id": "b2",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: escalation of m0 acceptance, part 5. Thi",
+      "facebook_reels": "Hook for facebook_reels: escalation of m0 acceptance, part 5. Thi",
+      "instagram_reels": "Hook for instagram_reels: escalation of m0 acceptance, part 5. Thi",
+      "tiktok": "Hook for tiktok: escalation of m0 acceptance, part 5. Thi"
+    }
+  },
+  {
+    "file": "/home/pawan/personal/content-creation-ai/channels/m0check/episodes/EP01/verticals/v07.mp4",
+    "beat_id": "b2",
+    "hooks": {
+      "youtube_shorts": "Hook for youtube_shorts: escalation of m0 acceptance, part 6. Thi",
+      "facebook_reels": "Hook for facebook_reels: escalation of m0 acceptance, part 6. Thi",
+      "instagram_reels": "Hook for instagram_reels: escalation of m0 acceptance, part 6. Thi",
+      "tiktok": "Hook for tiktok: escalation of m0 acceptance, part 6. Thi"
+    }
+  }
+]

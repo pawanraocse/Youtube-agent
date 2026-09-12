@@ -1,0 +1,32 @@
+[
+  {
+    "id": "s0",
+    "tier": "statistical_agency",
+    "title": "Source 0 on m0 acceptance",
+    "url": "https://example.invalid/0"
+  },
+  {
+    "id": "s1",
+    "tier": "academic",
+    "title": "Source 1 on m0 acceptance",
+    "url": "https://example.invalid/1"
+  },
+  {
+    "id": "s2",
+    "tier": "reputable_press",
+    "title": "Source 2 on m0 acceptance",
+    "url": "https://example.invalid/2"
+  },
+  {
+    "id": "s3",
+    "tier": "encyclopedia",
+    "title": "Source 3 on m0 acceptance",
+    "url": "https://example.invalid/3"
+  },
+  {
+    "id": "s4",
+    "tier": "statistical_agency",
+    "title": "Source 4 on m0 acceptance",
+    "url": "https://example.invalid/4"
+  }
+]

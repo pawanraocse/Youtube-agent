@@ -8,6 +8,7 @@ is a fact with a location, never an opinion.
 from __future__ import annotations
 
 import json
+import math
 import statistics
 import subprocess
 from dataclasses import dataclass
@@ -132,11 +133,22 @@ def check_master(master: Path, platforms: list[str], music_track: dict | None,
             f"LRA {a['input_lra']:.1f} exceeds 7 — quiet moments will vanish on a phone speaker"))
 
     # Phone speakers are mono. A mix that only survives in stereo does not survive.
-    drop = a["input_i"] - _mono_loudness(master)
-    if drop > 3.0:
-        out.append(Finding(
-            "mono_folddown",
-            f"{drop:.1f} LU lost folding to mono — phase cancellation is eating the dialogue"))
+    #
+    # But most of the drop is arithmetic, not cancellation: BS.1770 sums channel
+    # power, so two identical channels measure 10*log10(2) = 3.01 LU louder than
+    # the same signal folded down. Measured on real files this session — dual mono
+    # drops 3.00 LU with nothing wrong with it, fully uncorrelated L/R drops 6.00,
+    # and a phase-inverted pair drops to silence. Subtract the offset and what is
+    # left is the cancellation. A narration-led mix with a wide music bed lands
+    # near 0.7 LU of it, which is why the limit is 1.5 and not 3.
+    channels = _audio_channels(master)
+    if channels == 2:
+        excess = a["input_i"] - _mono_loudness(master) - 10 * math.log10(2)
+        if excess > 1.5:
+            out.append(Finding(
+                "mono_folddown",
+                f"{excess:.1f} LU lost folding to mono beyond the 3.0 LU channel-sum "
+                "offset — phase cancellation is eating the dialogue"))
 
     v = _video_props(master)
     if spec is not None and (v["width"], v["height"]) != (spec.width, spec.height):
@@ -237,6 +249,18 @@ def _mono_loudness(path: Path) -> float:
     )
     blob = proc.stderr[proc.stderr.rfind("{"): proc.stderr.rfind("}") + 1]
     return float(json.loads(blob)["input_i"])
+
+
+def _audio_channels(path: Path) -> int:
+    """Fold-down only means something for stereo. A mono master is trivially
+    mono-compatible, and `pan=mono|c0=0.5*c0+0.5*c1` would read a channel it has
+    not got."""
+    proc = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "a:0",
+         "-show_entries", "stream=channels", "-of", "csv=p=0", str(path)],
+        capture_output=True, text=True, check=True,
+    )
+    return int(proc.stdout.strip() or 0)
 
 
 def _video_props(path: Path) -> dict:

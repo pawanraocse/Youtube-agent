@@ -1,0 +1,3 @@
+{
+  "hook": "Hook for tiktok: cold_open of m0 acceptance, part 2. This"
+}

@@ -8,7 +8,8 @@ import subprocess
 
 import pytest
 
-from studio.checks import check_captions, check_master
+from studio.checks import (_audio_channels, _loudness, _mono_loudness,
+                           check_captions, check_master)
 from studio.core.config import PlatformSpec
 
 FF = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
@@ -34,6 +35,9 @@ def test_conforming_vertical_master_passes(tmp_path):
     checks = {f.check for f in check_master(m, [], None, spec=VERTICAL)}
     assert "geometry" not in checks and "framerate" not in checks
     assert "static_frame" not in checks
+    # The assertion whose absence hid DEBT-003: this fixture is dual mono, and the
+    # check used to flag it on the 3.01 LU BS.1770 channel-sum offset alone.
+    assert "mono_folddown" not in checks
 
 
 def test_wrong_geometry_is_caught(tmp_path):
@@ -72,3 +76,29 @@ def test_uncleared_music_blocks_the_platform_it_is_not_cleared_for(tmp_path):
 ])
 def test_caption_rules(caption, expected):
     assert expected in {f.check for f in check_captions([caption], VERTICAL)}
+
+
+def test_dual_mono_is_not_mistaken_for_phase_cancellation(tmp_path):
+    """Two identical channels sum to twice the power of one, so BS.1770 measures a
+    dual-mono file 3.01 LU louder than its own fold-down with nothing wrong. Every
+    narration-led mix is close to dual mono, so a check that counts that offset as
+    cancellation fires on correct masters and LOCK 3 can never open."""
+    m = _make(tmp_path / "dual.mp4", w=1080, h=1920, fps=30)
+    drop = _loudness(m)["input_i"] - _mono_loudness(m)
+    assert 2.9 <= drop <= 3.1                      # the artefact, measured
+    assert "mono_folddown" not in {f.check for f in check_master(m, [], None, spec=VERTICAL)}
+
+
+def test_a_mono_master_is_not_folded_down_at_all(tmp_path):
+    """A single-channel master has nothing to cancel against, and the downmix
+    filter would read a channel it has not got."""
+    m = tmp_path / "mono.mp4"
+    subprocess.run(
+        FF + ["-f", "lavfi", "-i", "testsrc2=size=1080x1920:rate=30:duration=4",
+              "-f", "lavfi", "-i", "sine=frequency=300:duration=4",
+              "-ac", "1", "-c:v", "libx264", "-preset", "ultrafast", "-pix_fmt", "yuv420p",
+              "-c:a", "aac", "-shortest", str(m)],
+        check=True, capture_output=True,
+    )
+    assert _audio_channels(m) == 1
+    assert "mono_folddown" not in {f.check for f in check_master(m, [], None, spec=VERTICAL)}

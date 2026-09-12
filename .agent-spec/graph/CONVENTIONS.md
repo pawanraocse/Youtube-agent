@@ -7,8 +7,8 @@
 ## Observed conventions
 | Topic | Convention | Evidence |
 |-------|-----------|----------|
-| test framework | pytest | 60 occurrences |
-| typing | type hints | 117 occurrences |
+| test framework | pytest | 62 occurrences |
+| typing | type hints | 118 occurrences |
 
 ## Services
 - `./` → **content-creation-ai**
