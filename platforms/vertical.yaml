@@ -1,0 +1,11 @@
+# One spec for Shorts, Reels and TikTok. They differ in duration cap and hook, not geometry.
+name: vertical
+aspect: "9:16"
+width: 1080
+height: 1920
+max_seconds: 90
+caption_safe_area: {top: 0.14, bottom: 0.20, left: 0.06, right: 0.06}
+hook_seconds: 2
+loudness_lufs: -14.0
+true_peak_dbtp: -1.0
+targets: [youtube_shorts, facebook_reels, instagram_reels, tiktok]

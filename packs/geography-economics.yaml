@@ -1,0 +1,17 @@
+# Subject matter, not production shape.
+name: geography-economics
+research:
+  strategy: data_first
+  min_sources: 5
+  tiers: [statistical_agency, academic, reputable_press, encyclopedia]
+narrative:
+  arc_template: question_then_evidence
+  cold_open: strongest_image_plus_question
+  end_hook: required
+critic:
+  rubric: rubrics/explainer-v1.yaml
+  pass_threshold: 80
+sensitivity:
+  reverence_required: false
+  banned_depictions: []
+  disclaimers: []

@@ -1,0 +1,9 @@
+# Versioned and agent-immutable. The critic reads this; nothing writes it.
+version: 1
+pass_threshold: 80
+max_iterations: 3
+dimensions:
+  factual_fidelity:  {weight: 0.30, description: "Every claim traceable to a cited source"}
+  hook_strength:     {weight: 0.25, description: "Cold open earns the next 30 seconds"}
+  pacing:            {weight: 0.25, description: "No dead stretch longer than 15 seconds"}
+  sensitivity:       {weight: 0.20, description: "Pack sensitivity rules respected"}

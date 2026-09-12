@@ -1,0 +1,188 @@
+[
+  {
+    "beat_id": "b0",
+    "start_ms": 0,
+    "end_ms": 6538,
+    "text": "cold_open of Why Switzerland is rich, part 1. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b0",
+    "start_ms": 6858,
+    "end_ms": 13396,
+    "text": "cold_open of Why Switzerland is rich, part 2. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b1",
+    "start_ms": 14096,
+    "end_ms": 20634,
+    "text": "promise of Why Switzerland is rich, part 1. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b1",
+    "start_ms": 20954,
+    "end_ms": 27492,
+    "text": "promise of Why Switzerland is rich, part 2. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b1",
+    "start_ms": 27812,
+    "end_ms": 34350,
+    "text": "promise of Why Switzerland is rich, part 3. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 35050,
+    "end_ms": 41588,
+    "text": "escalation of Why Switzerland is rich, part 1. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 41908,
+    "end_ms": 48446,
+    "text": "escalation of Why Switzerland is rich, part 2. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 48766,
+    "end_ms": 55304,
+    "text": "escalation of Why Switzerland is rich, part 3. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 55624,
+    "end_ms": 62162,
+    "text": "escalation of Why Switzerland is rich, part 4. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 62482,
+    "end_ms": 69020,
+    "text": "escalation of Why Switzerland is rich, part 5. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 69340,
+    "end_ms": 75878,
+    "text": "escalation of Why Switzerland is rich, part 6. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 76198,
+    "end_ms": 82736,
+    "text": "escalation of Why Switzerland is rich, part 7. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 83056,
+    "end_ms": 89594,
+    "text": "escalation of Why Switzerland is rich, part 8. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 89914,
+    "end_ms": 96452,
+    "text": "escalation of Why Switzerland is rich, part 9. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b2",
+    "start_ms": 96772,
+    "end_ms": 103310,
+    "text": "escalation of Why Switzerland is rich, part 10. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 104010,
+    "end_ms": 110548,
+    "text": "escalation of Why Switzerland is rich, part 1. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 110868,
+    "end_ms": 117406,
+    "text": "escalation of Why Switzerland is rich, part 2. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 117726,
+    "end_ms": 124264,
+    "text": "escalation of Why Switzerland is rich, part 3. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 124584,
+    "end_ms": 131122,
+    "text": "escalation of Why Switzerland is rich, part 4. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 131442,
+    "end_ms": 137980,
+    "text": "escalation of Why Switzerland is rich, part 5. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 138300,
+    "end_ms": 144838,
+    "text": "escalation of Why Switzerland is rich, part 6. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 145158,
+    "end_ms": 151696,
+    "text": "escalation of Why Switzerland is rich, part 7. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 152016,
+    "end_ms": 158554,
+    "text": "escalation of Why Switzerland is rich, part 8. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b3",
+    "start_ms": 158874,
+    "end_ms": 165412,
+    "text": "escalation of Why Switzerland is rich, part 9. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b4",
+    "start_ms": 166112,
+    "end_ms": 172650,
+    "text": "payoff of Why Switzerland is rich, part 1. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b4",
+    "start_ms": 172970,
+    "end_ms": 179508,
+    "text": "payoff of Why Switzerland is rich, part 2. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b4",
+    "start_ms": 179828,
+    "end_ms": 186366,
+    "text": "payoff of Why Switzerland is rich, part 3. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b4",
+    "start_ms": 186686,
+    "end_ms": 193224,
+    "text": "payoff of Why Switzerland is rich, part 4. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b4",
+    "start_ms": 193544,
+    "end_ms": 200082,
+    "text": "payoff of Why Switzerland is rich, part 5. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b5",
+    "start_ms": 200782,
+    "end_ms": 207320,
+    "text": "loop of Why Switzerland is rich, part 1. This is mock narration standing in for real prose."
+  },
+  {
+    "beat_id": "b5",
+    "start_ms": 207640,
+    "end_ms": 214178,
+    "text": "loop of Why Switzerland is rich, part 2. This is mock narration standing in for real prose."
+  }
+]

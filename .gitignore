@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+data/*.db
+data/assets/
+channels/*/episodes/*/render/
+music/*.mp3
+music/*.wav
+*.egg-info/
+.pytest_cache/

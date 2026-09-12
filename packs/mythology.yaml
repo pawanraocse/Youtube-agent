@@ -1,0 +1,18 @@
+name: mythology
+research:
+  strategy: canonical_text_first
+  min_sources: 6
+  tiers: [primary_text, academic_translation, encyclopedia, popular]
+narrative:
+  arc_template: heros_journey
+  cold_open: strongest_image_plus_question
+  end_hook: required
+critic:
+  rubric: rubrics/explainer-v1.yaml
+  pass_threshold: 82
+sensitivity:
+  reverence_required: true
+  banned_depictions:
+    - deity_in_undignified_pose
+    - sectarian_comparison_as_ranking
+  disclaimers: []

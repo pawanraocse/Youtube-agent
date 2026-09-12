@@ -1,0 +1,4 @@
+{
+  "title": "The truth about Why Switzerland is rich",
+  "promise": "What Why Switzerland is rich actually changed"
+}

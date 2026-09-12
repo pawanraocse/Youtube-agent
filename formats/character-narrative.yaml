@@ -1,0 +1,15 @@
+name: character-narrative
+description: Recurring cast carrying a story arc. Most expensive format; best retention.
+stages: [A1, A2, A3, A4, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11]
+length_minutes: [7, 10]
+gpu_budget_hours: 6.0
+providers:
+  image: flux-schnell
+  video: parallax2d
+  stock: none
+  tts: kokoro
+shot_vocabulary: [wide, close, hero_clip, establishing]
+host_required: true
+cast_required: true
+hero_shot_budget: 6
+mean_shot_seconds_max: 4.0

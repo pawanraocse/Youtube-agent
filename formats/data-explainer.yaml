@@ -1,0 +1,15 @@
+# Production shape, not subject matter. Declares which stages run and in what order.
+name: data-explainer
+description: Charts, maps and comparisons over narration. Cheapest format that still pays.
+stages: [A1, A2, A3, A4, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11]
+length_minutes: [6, 8]
+gpu_budget_hours: 1.0        # [LOW] estimate; replaced by measured wall time after M0
+providers:
+  image: sdxl
+  video: parallax2d
+  stock: pexels
+  tts: kokoro
+shot_vocabulary: [chart, map, comparison, host_bumper]
+host_required: true
+cast_required: false
+mean_shot_seconds_max: 4.0

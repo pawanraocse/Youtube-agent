@@ -1,0 +1,562 @@
+[
+  {
+    "idx": 0,
+    "beat_id": "b0",
+    "start_ms": 0,
+    "end_ms": 3429,
+    "prompt": "cold_open of Why Switzerland is rich, part 1. This is mock narration s \u2014 frame 0",
+    "character_ids": [
+      "host-01"
+    ],
+    "motion": "parallax"
+  },
+  {
+    "idx": 1,
+    "beat_id": "b0",
+    "start_ms": 3429,
+    "end_ms": 6858,
+    "prompt": "cold_open of Why Switzerland is rich, part 1. This is mock narration s \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 2,
+    "beat_id": "b0",
+    "start_ms": 6858,
+    "end_ms": 10477,
+    "prompt": "cold_open of Why Switzerland is rich, part 2. This is mock narration s \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 3,
+    "beat_id": "b0",
+    "start_ms": 10477,
+    "end_ms": 14096,
+    "prompt": "cold_open of Why Switzerland is rich, part 2. This is mock narration s \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 4,
+    "beat_id": "b1",
+    "start_ms": 14096,
+    "end_ms": 17525,
+    "prompt": "promise of Why Switzerland is rich, part 1. This is mock narration sta \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 5,
+    "beat_id": "b1",
+    "start_ms": 17525,
+    "end_ms": 20954,
+    "prompt": "promise of Why Switzerland is rich, part 1. This is mock narration sta \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 6,
+    "beat_id": "b1",
+    "start_ms": 20954,
+    "end_ms": 24383,
+    "prompt": "promise of Why Switzerland is rich, part 2. This is mock narration sta \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 7,
+    "beat_id": "b1",
+    "start_ms": 24383,
+    "end_ms": 27812,
+    "prompt": "promise of Why Switzerland is rich, part 2. This is mock narration sta \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 8,
+    "beat_id": "b1",
+    "start_ms": 27812,
+    "end_ms": 31431,
+    "prompt": "promise of Why Switzerland is rich, part 3. This is mock narration sta \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 9,
+    "beat_id": "b1",
+    "start_ms": 31431,
+    "end_ms": 35050,
+    "prompt": "promise of Why Switzerland is rich, part 3. This is mock narration sta \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 10,
+    "beat_id": "b2",
+    "start_ms": 35050,
+    "end_ms": 38479,
+    "prompt": "escalation of Why Switzerland is rich, part 1. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 11,
+    "beat_id": "b2",
+    "start_ms": 38479,
+    "end_ms": 41908,
+    "prompt": "escalation of Why Switzerland is rich, part 1. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 12,
+    "beat_id": "b2",
+    "start_ms": 41908,
+    "end_ms": 45337,
+    "prompt": "escalation of Why Switzerland is rich, part 2. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 13,
+    "beat_id": "b2",
+    "start_ms": 45337,
+    "end_ms": 48766,
+    "prompt": "escalation of Why Switzerland is rich, part 2. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 14,
+    "beat_id": "b2",
+    "start_ms": 48766,
+    "end_ms": 52195,
+    "prompt": "escalation of Why Switzerland is rich, part 3. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 15,
+    "beat_id": "b2",
+    "start_ms": 52195,
+    "end_ms": 55624,
+    "prompt": "escalation of Why Switzerland is rich, part 3. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 16,
+    "beat_id": "b2",
+    "start_ms": 55624,
+    "end_ms": 59053,
+    "prompt": "escalation of Why Switzerland is rich, part 4. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 17,
+    "beat_id": "b2",
+    "start_ms": 59053,
+    "end_ms": 62482,
+    "prompt": "escalation of Why Switzerland is rich, part 4. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 18,
+    "beat_id": "b2",
+    "start_ms": 62482,
+    "end_ms": 65911,
+    "prompt": "escalation of Why Switzerland is rich, part 5. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 19,
+    "beat_id": "b2",
+    "start_ms": 65911,
+    "end_ms": 69340,
+    "prompt": "escalation of Why Switzerland is rich, part 5. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 20,
+    "beat_id": "b2",
+    "start_ms": 69340,
+    "end_ms": 72769,
+    "prompt": "escalation of Why Switzerland is rich, part 6. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 21,
+    "beat_id": "b2",
+    "start_ms": 72769,
+    "end_ms": 76198,
+    "prompt": "escalation of Why Switzerland is rich, part 6. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 22,
+    "beat_id": "b2",
+    "start_ms": 76198,
+    "end_ms": 79627,
+    "prompt": "escalation of Why Switzerland is rich, part 7. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 23,
+    "beat_id": "b2",
+    "start_ms": 79627,
+    "end_ms": 83056,
+    "prompt": "escalation of Why Switzerland is rich, part 7. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 24,
+    "beat_id": "b2",
+    "start_ms": 83056,
+    "end_ms": 86485,
+    "prompt": "escalation of Why Switzerland is rich, part 8. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 25,
+    "beat_id": "b2",
+    "start_ms": 86485,
+    "end_ms": 89914,
+    "prompt": "escalation of Why Switzerland is rich, part 8. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 26,
+    "beat_id": "b2",
+    "start_ms": 89914,
+    "end_ms": 93343,
+    "prompt": "escalation of Why Switzerland is rich, part 9. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 27,
+    "beat_id": "b2",
+    "start_ms": 93343,
+    "end_ms": 96772,
+    "prompt": "escalation of Why Switzerland is rich, part 9. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 28,
+    "beat_id": "b2",
+    "start_ms": 96772,
+    "end_ms": 100391,
+    "prompt": "escalation of Why Switzerland is rich, part 10. This is mock narration \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 29,
+    "beat_id": "b2",
+    "start_ms": 100391,
+    "end_ms": 104010,
+    "prompt": "escalation of Why Switzerland is rich, part 10. This is mock narration \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 30,
+    "beat_id": "b3",
+    "start_ms": 104010,
+    "end_ms": 107439,
+    "prompt": "escalation of Why Switzerland is rich, part 1. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 31,
+    "beat_id": "b3",
+    "start_ms": 107439,
+    "end_ms": 110868,
+    "prompt": "escalation of Why Switzerland is rich, part 1. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 32,
+    "beat_id": "b3",
+    "start_ms": 110868,
+    "end_ms": 114297,
+    "prompt": "escalation of Why Switzerland is rich, part 2. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 33,
+    "beat_id": "b3",
+    "start_ms": 114297,
+    "end_ms": 117726,
+    "prompt": "escalation of Why Switzerland is rich, part 2. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 34,
+    "beat_id": "b3",
+    "start_ms": 117726,
+    "end_ms": 121155,
+    "prompt": "escalation of Why Switzerland is rich, part 3. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 35,
+    "beat_id": "b3",
+    "start_ms": 121155,
+    "end_ms": 124584,
+    "prompt": "escalation of Why Switzerland is rich, part 3. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 36,
+    "beat_id": "b3",
+    "start_ms": 124584,
+    "end_ms": 128013,
+    "prompt": "escalation of Why Switzerland is rich, part 4. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 37,
+    "beat_id": "b3",
+    "start_ms": 128013,
+    "end_ms": 131442,
+    "prompt": "escalation of Why Switzerland is rich, part 4. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 38,
+    "beat_id": "b3",
+    "start_ms": 131442,
+    "end_ms": 134871,
+    "prompt": "escalation of Why Switzerland is rich, part 5. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 39,
+    "beat_id": "b3",
+    "start_ms": 134871,
+    "end_ms": 138300,
+    "prompt": "escalation of Why Switzerland is rich, part 5. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 40,
+    "beat_id": "b3",
+    "start_ms": 138300,
+    "end_ms": 141729,
+    "prompt": "escalation of Why Switzerland is rich, part 6. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 41,
+    "beat_id": "b3",
+    "start_ms": 141729,
+    "end_ms": 145158,
+    "prompt": "escalation of Why Switzerland is rich, part 6. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 42,
+    "beat_id": "b3",
+    "start_ms": 145158,
+    "end_ms": 148587,
+    "prompt": "escalation of Why Switzerland is rich, part 7. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 43,
+    "beat_id": "b3",
+    "start_ms": 148587,
+    "end_ms": 152016,
+    "prompt": "escalation of Why Switzerland is rich, part 7. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 44,
+    "beat_id": "b3",
+    "start_ms": 152016,
+    "end_ms": 155445,
+    "prompt": "escalation of Why Switzerland is rich, part 8. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 45,
+    "beat_id": "b3",
+    "start_ms": 155445,
+    "end_ms": 158874,
+    "prompt": "escalation of Why Switzerland is rich, part 8. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 46,
+    "beat_id": "b3",
+    "start_ms": 158874,
+    "end_ms": 162493,
+    "prompt": "escalation of Why Switzerland is rich, part 9. This is mock narration  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 47,
+    "beat_id": "b3",
+    "start_ms": 162493,
+    "end_ms": 166112,
+    "prompt": "escalation of Why Switzerland is rich, part 9. This is mock narration  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 48,
+    "beat_id": "b4",
+    "start_ms": 166112,
+    "end_ms": 169541,
+    "prompt": "payoff of Why Switzerland is rich, part 1. This is mock narration stan \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 49,
+    "beat_id": "b4",
+    "start_ms": 169541,
+    "end_ms": 172970,
+    "prompt": "payoff of Why Switzerland is rich, part 1. This is mock narration stan \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 50,
+    "beat_id": "b4",
+    "start_ms": 172970,
+    "end_ms": 176399,
+    "prompt": "payoff of Why Switzerland is rich, part 2. This is mock narration stan \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 51,
+    "beat_id": "b4",
+    "start_ms": 176399,
+    "end_ms": 179828,
+    "prompt": "payoff of Why Switzerland is rich, part 2. This is mock narration stan \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 52,
+    "beat_id": "b4",
+    "start_ms": 179828,
+    "end_ms": 183257,
+    "prompt": "payoff of Why Switzerland is rich, part 3. This is mock narration stan \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 53,
+    "beat_id": "b4",
+    "start_ms": 183257,
+    "end_ms": 186686,
+    "prompt": "payoff of Why Switzerland is rich, part 3. This is mock narration stan \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 54,
+    "beat_id": "b4",
+    "start_ms": 186686,
+    "end_ms": 190115,
+    "prompt": "payoff of Why Switzerland is rich, part 4. This is mock narration stan \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 55,
+    "beat_id": "b4",
+    "start_ms": 190115,
+    "end_ms": 193544,
+    "prompt": "payoff of Why Switzerland is rich, part 4. This is mock narration stan \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 56,
+    "beat_id": "b4",
+    "start_ms": 193544,
+    "end_ms": 197163,
+    "prompt": "payoff of Why Switzerland is rich, part 5. This is mock narration stan \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 57,
+    "beat_id": "b4",
+    "start_ms": 197163,
+    "end_ms": 200782,
+    "prompt": "payoff of Why Switzerland is rich, part 5. This is mock narration stan \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 58,
+    "beat_id": "b5",
+    "start_ms": 200782,
+    "end_ms": 204211,
+    "prompt": "loop of Why Switzerland is rich, part 1. This is mock narration standi \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 59,
+    "beat_id": "b5",
+    "start_ms": 204211,
+    "end_ms": 207640,
+    "prompt": "loop of Why Switzerland is rich, part 1. This is mock narration standi \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 60,
+    "beat_id": "b5",
+    "start_ms": 207640,
+    "end_ms": 210909,
+    "prompt": "loop of Why Switzerland is rich, part 2. This is mock narration standi \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 61,
+    "beat_id": "b5",
+    "start_ms": 210909,
+    "end_ms": 214178,
+    "prompt": "loop of Why Switzerland is rich, part 2. This is mock narration standi \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  }
+]

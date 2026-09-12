@@ -1,0 +1,19 @@
+# The one file that protects actual money. `studio licence-audit` reads it.
+# verified_on is null until a human has read the model card. M0 fills these in.
+allowed:
+  flux-schnell:      {licence: Apache-2.0,        commercial: true,  verified_on: null}
+  sdxl-1.0:          {licence: OpenRAIL++-M,      commercial: true,  verified_on: null}
+  kokoro-82m:        {licence: Apache-2.0,        commercial: true,  verified_on: null,
+                      open_question: "Does it ship usable Hindi voices? The dub plan depends on it."}
+  faster-whisper:    {licence: MIT,               commercial: true,  verified_on: null}
+  depth-anything-v2: {licence: Apache-2.0,        commercial: true,  verified_on: null}
+  wan-2.2-5b-ti2v:   {licence: Apache-2.0,        commercial: true,  verified_on: null,
+                      open_question: "Does the 5B TI2V variant fit 8 GB VRAM?"}
+  pexels:            {licence: Pexels,            commercial: true,  verified_on: null}
+
+forbidden:
+  flux-dev:      {reason: "FLUX.1-dev Non-Commercial License"}
+  xtts-v2:       {reason: "Coqui CPML — non-commercial"}
+  musicgen:      {reason: "Weights are CC-BY-NC"}
+  hunyuanvideo:  {reason: "Tencent community licence, region-restricted"}
+  edge-tts:      {reason: "GPL-3.0 package driving a Microsoft service with no clear commercial redistribution grant"}
