@@ -44,6 +44,89 @@ GATES: dict[Stage, str] = {
 NEW = "NEW"
 
 
+def _at_most_eight_words(v: str) -> str:
+    if len(v.split()) > 8:
+        raise ValueError(f"promise must be 8 words or fewer, got {len(v.split())}")
+    return v
+
+
+class Demand(BaseModel):
+    """A1. What a producer judges about a topic before any work is paid for.
+
+    The agent supplies only the estimates it is qualified to make. Every derived
+    figure — niche score, revenue per GPU hour — is computed at ingest, because
+    arithmetic done in an agent's head is arithmetic nobody can audit.
+    """
+
+    topic: str
+    rights_verdict: Literal["clear", "blocked", "needs_change"]
+    rights_notes: str = ""
+    paying_alternative: str | None = Field(
+        default=None,
+        description="Required when the verdict is not clear: the version of this idea that pays.",
+    )
+    projected_rpm: float = Field(gt=0, description="USD per 1000 views in this niche.")
+    demand_volume: int = Field(gt=0, description="Expected views per video at steady state.")
+    competition_density: float = Field(
+        ge=0.0, le=1.0, description="0 is an empty niche, 1 is saturated by incumbents."
+    )
+    angle: str = Field(description="The take nobody in the competitor scan has already made.")
+    affiliate_angle: str | None = Field(
+        default=None,
+        description="A plausible non-AdSense stream, or null. Its absence lowers the score.",
+    )
+    competitors: list[str] = Field(default_factory=list)
+    evidence: list[str] = Field(
+        default_factory=list, description="What the estimates above are based on."
+    )
+    # Computed at ingest, never supplied by the agent.
+    niche_score: float | None = None
+    revenue_per_gpu_hour: float | None = None
+
+
+class Source(BaseModel):
+    """A2. One citable source, tiered by the pack's source hierarchy."""
+
+    id: str
+    tier: str
+    title: str
+    url: str
+    publisher: str = ""
+    year: int | None = None
+    supports: str = Field(description="The specific claim this source is cited for.")
+
+
+class SeriesEpisode(BaseModel):
+    number: int = Field(ge=1)
+    title: str
+    promise: str
+    arc_position: str
+    cliffhanger: str
+
+    @field_validator("promise")
+    @classmethod
+    def _eight_words(cls, v: str) -> str:
+        return _at_most_eight_words(v)
+
+
+class SeriesMap(BaseModel):
+    """A3. The episode list. No two episodes may repeat a beat."""
+
+    topic: str
+    episodes: list[SeriesEpisode] = Field(min_length=1)
+
+    @field_validator("episodes")
+    @classmethod
+    def _distinct(cls, v: list[SeriesEpisode]) -> list[SeriesEpisode]:
+        promises = [e.promise.strip().lower() for e in v]
+        if len(set(promises)) != len(promises):
+            raise ValueError("two episodes share a promise — the series repeats a beat")
+        numbers = [e.number for e in v]
+        if numbers != list(range(1, len(numbers) + 1)):
+            raise ValueError(f"episode numbers must run 1..{len(numbers)}, got {numbers}")
+        return v
+
+
 class Character(BaseModel):
     """A host or cast member. Registered once at studio level, reused anywhere."""
 
@@ -92,6 +175,12 @@ class ScriptChunk(BaseModel):
     beat_id: str
     text: str
     pause_ms: int = Field(default=350, ge=0, le=4000)
+    needs_citation: bool = Field(
+        default=False, description="True for any sentence asserting a checkable fact."
+    )
+    source_id: str | None = Field(
+        default=None, description="Must name a row in sources.json when needs_citation is set."
+    )
 
 
 class Shot(BaseModel):
@@ -131,9 +220,7 @@ class Packaging(BaseModel):
     @field_validator("promise")
     @classmethod
     def _eight_words(cls, v: str) -> str:
-        if len(v.split()) > 8:
-            raise ValueError(f"promise must be 8 words or fewer, got {len(v.split())}")
-        return v
+        return _at_most_eight_words(v)
 
 
 class GateScore(BaseModel):

@@ -1,0 +1,562 @@
+[
+  {
+    "idx": 0,
+    "beat_id": "b0",
+    "start_ms": 0,
+    "end_ms": 3044,
+    "prompt": "cold_open of baseline check, part 1. This is mock narration standing i \u2014 frame 0",
+    "character_ids": [
+      "host-01"
+    ],
+    "motion": "parallax"
+  },
+  {
+    "idx": 1,
+    "beat_id": "b0",
+    "start_ms": 3044,
+    "end_ms": 6089,
+    "prompt": "cold_open of baseline check, part 1. This is mock narration standing i \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 2,
+    "beat_id": "b0",
+    "start_ms": 6089,
+    "end_ms": 9323,
+    "prompt": "cold_open of baseline check, part 2. This is mock narration standing i \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 3,
+    "beat_id": "b0",
+    "start_ms": 9323,
+    "end_ms": 12558,
+    "prompt": "cold_open of baseline check, part 2. This is mock narration standing i \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 4,
+    "beat_id": "b1",
+    "start_ms": 12558,
+    "end_ms": 15602,
+    "prompt": "promise of baseline check, part 1. This is mock narration standing in  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 5,
+    "beat_id": "b1",
+    "start_ms": 15602,
+    "end_ms": 18647,
+    "prompt": "promise of baseline check, part 1. This is mock narration standing in  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 6,
+    "beat_id": "b1",
+    "start_ms": 18647,
+    "end_ms": 21691,
+    "prompt": "promise of baseline check, part 2. This is mock narration standing in  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 7,
+    "beat_id": "b1",
+    "start_ms": 21691,
+    "end_ms": 24736,
+    "prompt": "promise of baseline check, part 2. This is mock narration standing in  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 8,
+    "beat_id": "b1",
+    "start_ms": 24736,
+    "end_ms": 27970,
+    "prompt": "promise of baseline check, part 3. This is mock narration standing in  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 9,
+    "beat_id": "b1",
+    "start_ms": 27970,
+    "end_ms": 31205,
+    "prompt": "promise of baseline check, part 3. This is mock narration standing in  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 10,
+    "beat_id": "b2",
+    "start_ms": 31205,
+    "end_ms": 34249,
+    "prompt": "escalation of baseline check, part 1. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 11,
+    "beat_id": "b2",
+    "start_ms": 34249,
+    "end_ms": 37294,
+    "prompt": "escalation of baseline check, part 1. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 12,
+    "beat_id": "b2",
+    "start_ms": 37294,
+    "end_ms": 40338,
+    "prompt": "escalation of baseline check, part 2. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 13,
+    "beat_id": "b2",
+    "start_ms": 40338,
+    "end_ms": 43383,
+    "prompt": "escalation of baseline check, part 2. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 14,
+    "beat_id": "b2",
+    "start_ms": 43383,
+    "end_ms": 46427,
+    "prompt": "escalation of baseline check, part 3. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 15,
+    "beat_id": "b2",
+    "start_ms": 46427,
+    "end_ms": 49472,
+    "prompt": "escalation of baseline check, part 3. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 16,
+    "beat_id": "b2",
+    "start_ms": 49472,
+    "end_ms": 52516,
+    "prompt": "escalation of baseline check, part 4. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 17,
+    "beat_id": "b2",
+    "start_ms": 52516,
+    "end_ms": 55561,
+    "prompt": "escalation of baseline check, part 4. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 18,
+    "beat_id": "b2",
+    "start_ms": 55561,
+    "end_ms": 58605,
+    "prompt": "escalation of baseline check, part 5. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 19,
+    "beat_id": "b2",
+    "start_ms": 58605,
+    "end_ms": 61650,
+    "prompt": "escalation of baseline check, part 5. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 20,
+    "beat_id": "b2",
+    "start_ms": 61650,
+    "end_ms": 64694,
+    "prompt": "escalation of baseline check, part 6. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 21,
+    "beat_id": "b2",
+    "start_ms": 64694,
+    "end_ms": 67739,
+    "prompt": "escalation of baseline check, part 6. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 22,
+    "beat_id": "b2",
+    "start_ms": 67739,
+    "end_ms": 70783,
+    "prompt": "escalation of baseline check, part 7. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 23,
+    "beat_id": "b2",
+    "start_ms": 70783,
+    "end_ms": 73828,
+    "prompt": "escalation of baseline check, part 7. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 24,
+    "beat_id": "b2",
+    "start_ms": 73828,
+    "end_ms": 76872,
+    "prompt": "escalation of baseline check, part 8. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 25,
+    "beat_id": "b2",
+    "start_ms": 76872,
+    "end_ms": 79917,
+    "prompt": "escalation of baseline check, part 8. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 26,
+    "beat_id": "b2",
+    "start_ms": 79917,
+    "end_ms": 82961,
+    "prompt": "escalation of baseline check, part 9. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 27,
+    "beat_id": "b2",
+    "start_ms": 82961,
+    "end_ms": 86006,
+    "prompt": "escalation of baseline check, part 9. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 28,
+    "beat_id": "b2",
+    "start_ms": 86006,
+    "end_ms": 89240,
+    "prompt": "escalation of baseline check, part 10. This is mock narration standing \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 29,
+    "beat_id": "b2",
+    "start_ms": 89240,
+    "end_ms": 92475,
+    "prompt": "escalation of baseline check, part 10. This is mock narration standing \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 30,
+    "beat_id": "b3",
+    "start_ms": 92475,
+    "end_ms": 95519,
+    "prompt": "escalation of baseline check, part 1. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 31,
+    "beat_id": "b3",
+    "start_ms": 95519,
+    "end_ms": 98564,
+    "prompt": "escalation of baseline check, part 1. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 32,
+    "beat_id": "b3",
+    "start_ms": 98564,
+    "end_ms": 101608,
+    "prompt": "escalation of baseline check, part 2. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 33,
+    "beat_id": "b3",
+    "start_ms": 101608,
+    "end_ms": 104653,
+    "prompt": "escalation of baseline check, part 2. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 34,
+    "beat_id": "b3",
+    "start_ms": 104653,
+    "end_ms": 107697,
+    "prompt": "escalation of baseline check, part 3. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 35,
+    "beat_id": "b3",
+    "start_ms": 107697,
+    "end_ms": 110742,
+    "prompt": "escalation of baseline check, part 3. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 36,
+    "beat_id": "b3",
+    "start_ms": 110742,
+    "end_ms": 113786,
+    "prompt": "escalation of baseline check, part 4. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 37,
+    "beat_id": "b3",
+    "start_ms": 113786,
+    "end_ms": 116831,
+    "prompt": "escalation of baseline check, part 4. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 38,
+    "beat_id": "b3",
+    "start_ms": 116831,
+    "end_ms": 119875,
+    "prompt": "escalation of baseline check, part 5. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 39,
+    "beat_id": "b3",
+    "start_ms": 119875,
+    "end_ms": 122920,
+    "prompt": "escalation of baseline check, part 5. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 40,
+    "beat_id": "b3",
+    "start_ms": 122920,
+    "end_ms": 125964,
+    "prompt": "escalation of baseline check, part 6. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 41,
+    "beat_id": "b3",
+    "start_ms": 125964,
+    "end_ms": 129009,
+    "prompt": "escalation of baseline check, part 6. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 42,
+    "beat_id": "b3",
+    "start_ms": 129009,
+    "end_ms": 132053,
+    "prompt": "escalation of baseline check, part 7. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 43,
+    "beat_id": "b3",
+    "start_ms": 132053,
+    "end_ms": 135098,
+    "prompt": "escalation of baseline check, part 7. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 44,
+    "beat_id": "b3",
+    "start_ms": 135098,
+    "end_ms": 138142,
+    "prompt": "escalation of baseline check, part 8. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 45,
+    "beat_id": "b3",
+    "start_ms": 138142,
+    "end_ms": 141187,
+    "prompt": "escalation of baseline check, part 8. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 46,
+    "beat_id": "b3",
+    "start_ms": 141187,
+    "end_ms": 144421,
+    "prompt": "escalation of baseline check, part 9. This is mock narration standing  \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 47,
+    "beat_id": "b3",
+    "start_ms": 144421,
+    "end_ms": 147656,
+    "prompt": "escalation of baseline check, part 9. This is mock narration standing  \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 48,
+    "beat_id": "b4",
+    "start_ms": 147656,
+    "end_ms": 150700,
+    "prompt": "payoff of baseline check, part 1. This is mock narration standing in f \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 49,
+    "beat_id": "b4",
+    "start_ms": 150700,
+    "end_ms": 153745,
+    "prompt": "payoff of baseline check, part 1. This is mock narration standing in f \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 50,
+    "beat_id": "b4",
+    "start_ms": 153745,
+    "end_ms": 156789,
+    "prompt": "payoff of baseline check, part 2. This is mock narration standing in f \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 51,
+    "beat_id": "b4",
+    "start_ms": 156789,
+    "end_ms": 159834,
+    "prompt": "payoff of baseline check, part 2. This is mock narration standing in f \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 52,
+    "beat_id": "b4",
+    "start_ms": 159834,
+    "end_ms": 162878,
+    "prompt": "payoff of baseline check, part 3. This is mock narration standing in f \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 53,
+    "beat_id": "b4",
+    "start_ms": 162878,
+    "end_ms": 165923,
+    "prompt": "payoff of baseline check, part 3. This is mock narration standing in f \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 54,
+    "beat_id": "b4",
+    "start_ms": 165923,
+    "end_ms": 168967,
+    "prompt": "payoff of baseline check, part 4. This is mock narration standing in f \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 55,
+    "beat_id": "b4",
+    "start_ms": 168967,
+    "end_ms": 172012,
+    "prompt": "payoff of baseline check, part 4. This is mock narration standing in f \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 56,
+    "beat_id": "b4",
+    "start_ms": 172012,
+    "end_ms": 175246,
+    "prompt": "payoff of baseline check, part 5. This is mock narration standing in f \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 57,
+    "beat_id": "b4",
+    "start_ms": 175246,
+    "end_ms": 178481,
+    "prompt": "payoff of baseline check, part 5. This is mock narration standing in f \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 58,
+    "beat_id": "b5",
+    "start_ms": 178481,
+    "end_ms": 181525,
+    "prompt": "loop of baseline check, part 1. This is mock narration standing in for \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 59,
+    "beat_id": "b5",
+    "start_ms": 181525,
+    "end_ms": 184570,
+    "prompt": "loop of baseline check, part 1. This is mock narration standing in for \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 60,
+    "beat_id": "b5",
+    "start_ms": 184570,
+    "end_ms": 187454,
+    "prompt": "loop of baseline check, part 2. This is mock narration standing in for \u2014 frame 0",
+    "character_ids": [],
+    "motion": "parallax"
+  },
+  {
+    "idx": 61,
+    "beat_id": "b5",
+    "start_ms": 187454,
+    "end_ms": 190339,
+    "prompt": "loop of baseline check, part 2. This is mock narration standing in for \u2014 frame 1",
+    "character_ids": [],
+    "motion": "parallax"
+  }
+]

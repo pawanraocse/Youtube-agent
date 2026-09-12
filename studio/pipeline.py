@@ -15,16 +15,34 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from studio.checks import Finding, check_licences, check_master, check_picture, check_script
+from studio.core.briefs import SPECS, records_step
 from studio.core.cas import AssetStore, hash_inputs
 from studio.core.config import Format, Pack, PlatformSpec
+from studio.core.errors import PipelineHalt
 from studio.core.schemas import GATES, Stage
 from studio.core.state import Store
 from studio.render.assemble import concat_clips, mix_audio, mux, probe
 from studio.render.verticals import cut_vertical
 
 
-class GateBlocked(RuntimeError):
+class GateBlocked(PipelineHalt):
     """A lock did not open. Either a check failed or no human has decided yet."""
+
+
+class AwaitingAgent(PipelineHalt):
+    """A judgement stage has no ingested artefact yet.
+
+    Not a failure. The run has walked as far as determinism can take it and is
+    waiting for a Claude Code agent to do the thinking and hand the result back
+    through `studio ingest`.
+    """
+
+    def __init__(self, stage: Stage, agent: str, episode_id: str) -> None:
+        self.stage, self.agent = stage, agent
+        super().__init__(
+            f"{stage.value} is owned by {agent} — run"
+            f" `studio brief --episode {episode_id} --stage {stage.value} --json`"
+        )
 
 
 @dataclass
@@ -38,6 +56,7 @@ class Context:
     pack: Pack
     providers: dict
     auto_approve_as: str | None = None   # mock/dev only; never a real publish path
+    text_mode: str = "mock"              # "agent" hands the text stages to subagents
 
     def path(self, *parts: str) -> Path:
         p = self.root.joinpath(*parts)
@@ -257,8 +276,15 @@ def _gate(ctx: Context, stage: Stage, findings: list[Finding], score: float) -> 
     decided_by = ctx.auto_approve_as if not findings else None
     ctx.store.record_gate(ctx.episode_id, gate, iteration, payload, decided_by=decided_by)
     if findings:
-        raise GateBlocked(f"{gate} blocked by {len(findings)} check(s): "
-                          + "; ".join(str(f) for f in findings[:4]))
+        cap = int(ctx.pack.rubric().get("max_iterations", 3))
+        msg = f"{gate} blocked by {len(findings)} check(s): " + "; ".join(str(f) for f in findings[:4])
+        if iteration > cap:
+            # A score that stops improving means the problem is upstream, and more
+            # rewriting will not fix it. Escalate with the trend rather than loop.
+            trend = ctx.store.gate_trend(ctx.episode_id, gate)
+            msg += (f" — {iteration} iterations exceeds the cap of {cap}; score trend"
+                    f" {trend}. Fix this upstream, not by rewriting again.")
+        raise GateBlocked(msg)
     if not ctx.store.gate_is_open(ctx.episode_id, gate):
         raise GateBlocked(f"{gate} needs a recorded human decision — "
                           f"run `studio approve {ctx.episode_id} {gate} --as <name>`")
@@ -269,7 +295,17 @@ def b4_script_review(ctx: Context) -> Path:
     findings = check_script(ctx.read_json("script.json"),
                             ctx.read_json("packaging.json"),
                             ctx.read_json("sources.json"))
-    return _gate(ctx, Stage.B4_SCRIPT_REVIEW, findings, 86.0)
+    return _gate(ctx, Stage.B4_SCRIPT_REVIEW, findings, _critic_score(ctx))
+
+
+def _critic_score(ctx: Context) -> float:
+    """The critic's number, from the critic. Never from the agent that wrote the script."""
+    if ctx.text_mode != "agent":
+        return 86.0
+    path = ctx.path("critique.json")
+    if not path.exists():
+        raise AwaitingAgent(Stage.B4_SCRIPT_REVIEW, "studio-critic", ctx.episode_id)
+    return float(json.loads(path.read_text())["total"])
 
 
 def b7_animatic_review(ctx: Context) -> Path:
@@ -295,6 +331,12 @@ STAGES = {
 }
 
 
+def step_hash(topic: str, fmt_name: str, pack_name: str, stage: Stage) -> str:
+    """The one definition of a step's identity. `studio ingest` recomputes it, so
+    a divergence here would silently re-run every stage on the next walk."""
+    return hash_inputs(topic, fmt_name, pack_name, stage.value)
+
+
 def run(ctx: Context) -> list[tuple[Stage, bool]]:
     """Walk the format's stage list. Returns (stage, was_skipped) per stage."""
     results = []
@@ -302,10 +344,15 @@ def run(ctx: Context) -> list[tuple[Stage, bool]]:
         fn = STAGES.get(stage)
         if fn is None:
             continue
-        ihash = hash_inputs(ctx.topic, ctx.fmt.name, ctx.pack.name, stage.value)
+        ihash = step_hash(ctx.topic, ctx.fmt.name, ctx.pack.name, stage)
         if ctx.store.completed(ctx.episode_id, stage, ihash):
             results.append((stage, True))
             continue
+        if ctx.text_mode == "agent" and records_step(stage):
+            # Judgement stages are not computed here. The walk stops and names the
+            # agent that owes the artefact; `studio ingest` records the step, and
+            # the next walk skips it under the ordinary resume rule.
+            raise AwaitingAgent(stage, SPECS[stage].agent, ctx.episode_id)
         with ctx.store.step(ctx.episode_id, stage, ihash) as out:
             out[0] = str(fn(ctx))
         results.append((stage, False))

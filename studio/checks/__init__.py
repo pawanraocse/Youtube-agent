@@ -25,6 +25,53 @@ class Finding:
         return f"{self.check}: {self.detail}"
 
 
+def check_demand(demand: dict, pack: Pack, fmt: Format) -> list[Finding]:
+    """A1's exit. The cheapest place to refuse a concept is before it is researched.
+
+    Three categories destroy the revenue they generate — song mashups, film-scene
+    recreation and COPPA kids content — so a producer that does not return a clear
+    rights verdict with the paying alternative attached does not get to continue.
+    """
+    out: list[Finding] = []
+    verdict = demand.get("rights_verdict")
+    if verdict != "clear":
+        note = demand.get("rights_notes") or "no reason recorded"
+        out.append(Finding("rights", f"verdict {verdict!r}: {note}"))
+        if not demand.get("paying_alternative"):
+            out.append(Finding("rights", "a blocked concept must name the version that pays"))
+    floor = float(pack.demand.get("min_revenue_per_gpu_hour", 4.0))
+    rpgh = demand.get("revenue_per_gpu_hour")
+    if rpgh is None:
+        out.append(Finding("score", "revenue_per_gpu_hour not computed"))
+    elif rpgh < floor:
+        out.append(Finding(
+            "score",
+            f"${rpgh:.1f} per GPU hour is below the {pack.name} floor of ${floor:.1f}"
+            f" at {fmt.gpu_budget_hours}h per episode — not worth the electricity",
+        ))
+    if not demand.get("evidence"):
+        out.append(Finding("evidence", "no basis recorded for the RPM and volume estimates"))
+    return out
+
+
+def check_beats(beats: list[dict], fmt: Format, pack: Pack) -> list[Finding]:
+    """Clippable moments are marked here or hunted for later at far greater cost."""
+    out: list[Finding] = []
+    if not beats:
+        return [Finding("beats", "empty beat sheet")]
+    if beats[0]["kind"] != "cold_open":
+        out.append(Finding("structure", f"first beat is {beats[0]['kind']!r}, not a cold open"))
+    if pack.narrative.get("end_hook") and beats[-1]["kind"] != "loop":
+        out.append(Finding("structure", "pack requires an end hook; last beat is not a loop"))
+    if not any(b.get("clippable") for b in beats):
+        out.append(Finding("clippable", "no beat marked clippable — B10 has nothing to cut"))
+    total = sum(b["target_seconds"] for b in beats) / 60
+    lo, hi = fmt.length_minutes
+    if not lo <= total <= hi:
+        out.append(Finding("length", f"beats total {total:.1f} min, format wants {lo}-{hi}"))
+    return out
+
+
 def check_script(script_chunks: list[dict], packaging: dict, sources: list[dict]) -> list[Finding]:
     out: list[Finding] = []
     if not sources:
@@ -39,6 +86,11 @@ def check_script(script_chunks: list[dict], packaging: dict, sources: list[dict]
     uncited = [c for c in script_chunks if c.get("needs_citation") and not c.get("source_id")]
     for c in uncited:
         out.append(Finding("citations", f"claim without a source: {c['text'][:60]!r}"))
+    known = {s["id"] for s in sources}
+    for c in script_chunks:
+        sid = c.get("source_id")
+        if sid and sid not in known:
+            out.append(Finding("citations", f"unknown source id {sid!r} in {c['text'][:40]!r}"))
     return out
 
 

@@ -30,3 +30,32 @@ When the agent discovers a violation of SOLID or Clean Code principles but is no
 - **HIGH**: Major architectural violation (God object, circular dependency) that slows down development.
 - **MEDIUM**: Code smell, missing test coverage, or minor inefficiency.
 - **LOW**: Style violation or minor cleanup needed.
+
+## DEBT-003 — the mono fold-down check can never pass
+
+`studio/checks/__init__.py:135` compares a master's integrated loudness against the
+loudness of its own mono downmix and flags a drop above 3.0 LU as phase cancellation.
+Measured this session on the mock master: a drop of exactly 3.0 LU on a file with no
+phase problem at all.
+
+The 3 LU is an artefact of BS.1770, not a defect in the mix. Two identical channels sum
+to twice the power of one, so a dual-mono stereo file always measures 3.01 LU louder
+than the same signal folded to mono. Every narration-led mix is close to dual-mono,
+which means this finding fires on correct masters and **LOCK 3 cannot currently open**.
+
+The fix is to subtract the expected 3.01 LU offset before thresholding, so the check
+measures cancellation beyond the channel-count artefact. Not fixed in M1: B8–B9 belong
+to M4, and the fix needs a known-bad fixture with genuine phase inversion to prove it
+still catches the real failure.
+
+## DEBT-004 — mock video is static, so B10 and B11 have no coverage
+
+`MockVideo` renders a held colour frame, which `_freeze_spans` correctly reports as 61
+frames beyond 2.5 s. The check is right and the mock is wrong. Combined with DEBT-003
+this stops every mock walk at B9, so `b10_multiply` and `b11_distribute` are exercised
+by no end-to-end run — M0's stated acceptance ("emits a placeholder master plus
+placeholder verticals") has not held since commit ff509e7 added the production
+standard, and was not re-run afterwards.
+
+Fix: give `MockVideo` a slow `zoompan` so its output carries motion. Cheap, and it
+restores coverage of the last two stages.

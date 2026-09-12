@@ -1,0 +1,45 @@
+{
+  "topic": "baseline check",
+  "episodes": [
+    {
+      "number": 1,
+      "promise": "Episode 1 promise",
+      "cliffhanger": "Hook into 2"
+    },
+    {
+      "number": 2,
+      "promise": "Episode 2 promise",
+      "cliffhanger": "Hook into 3"
+    },
+    {
+      "number": 3,
+      "promise": "Episode 3 promise",
+      "cliffhanger": "Hook into 4"
+    },
+    {
+      "number": 4,
+      "promise": "Episode 4 promise",
+      "cliffhanger": "Hook into 5"
+    },
+    {
+      "number": 5,
+      "promise": "Episode 5 promise",
+      "cliffhanger": "Hook into 6"
+    },
+    {
+      "number": 6,
+      "promise": "Episode 6 promise",
+      "cliffhanger": "Hook into 7"
+    },
+    {
+      "number": 7,
+      "promise": "Episode 7 promise",
+      "cliffhanger": "Hook into 8"
+    },
+    {
+      "number": 8,
+      "promise": "Episode 8 promise",
+      "cliffhanger": "Hook into 9"
+    }
+  ]
+}

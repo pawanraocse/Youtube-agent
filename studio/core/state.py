@@ -17,6 +17,7 @@ from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 
+from studio.core.errors import PipelineHalt
 from studio.core.schemas import GATES, NEW, Stage
 
 SCHEMA = """
@@ -115,6 +116,23 @@ class Store:
         )
         self.conn.commit()
 
+    def episode_context(self, episode_id: str) -> dict | None:
+        """Topic, pack and format for an episode, resolved through its channel.
+
+        `studio brief` and `studio ingest` are handed only an episode id, and they
+        must reconstruct exactly the inputs `pipeline.run` hashes — so this join,
+        rather than re-passing --topic --pack --format on every call and risking a
+        mismatch that silently re-runs every stage.
+        """
+        row = self.conn.execute(
+            "SELECT e.id AS episode_id, e.number, s.topic, c.id AS channel_id,"
+            " c.pack, c.format FROM episodes e"
+            " JOIN series s ON s.id = e.series_id"
+            " JOIN channels c ON c.id = s.channel_id WHERE e.id = ?",
+            (episode_id,),
+        ).fetchone()
+        return dict(row) if row else None
+
     def episode_state(self, episode_id: str) -> str:
         row = self.conn.execute(
             "SELECT state FROM episodes WHERE id = ?", (episode_id,)
@@ -159,10 +177,14 @@ class Store:
         try:
             yield holder
         except Exception as exc:
+            # A halt is the pipeline working: a lock waiting on a human, or a stage
+            # waiting on an agent. It still bars `completed`, which matches 'ok'
+            # alone, so the stage re-runs — it is only reported differently.
+            status = "blocked" if isinstance(exc, PipelineHalt) else "failed"
             self.conn.execute(
-                "UPDATE steps SET status = 'failed', error = ?, wall_seconds = ?"
+                "UPDATE steps SET status = ?, error = ?, wall_seconds = ?"
                 " WHERE episode_id = ? AND stage = ?",
-                (str(exc), time.monotonic() - started, episode_id, stage.value),
+                (status, str(exc), time.monotonic() - started, episode_id, stage.value),
             )
             self.conn.commit()
             raise

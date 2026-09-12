@@ -16,3 +16,7 @@ sensitivity:
     - deity_in_undignified_pose
     - sectarian_comparison_as_ranking
   disclaimers: []
+demand:
+  # Deliberately low. Mythology earns least per GPU hour of any pack and belongs
+  # in cohort two as the character-consistency showcase, not on its economics.
+  min_revenue_per_gpu_hour: 4.0

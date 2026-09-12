@@ -1,0 +1,11 @@
+[
+  {
+    "id": "host-01",
+    "name": "The Narrator",
+    "role": "host",
+    "canon": {
+      "look": "mid-30s, neutral studio lighting"
+    },
+    "likeness_checked_at": "mock"
+  }
+]

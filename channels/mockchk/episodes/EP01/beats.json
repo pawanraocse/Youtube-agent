@@ -1,0 +1,44 @@
+[
+  {
+    "id": "b0",
+    "kind": "cold_open",
+    "summary": "cold_open of mock check",
+    "target_seconds": 33.6,
+    "clippable": true
+  },
+  {
+    "id": "b1",
+    "kind": "promise",
+    "summary": "promise of mock check",
+    "target_seconds": 42.0,
+    "clippable": false
+  },
+  {
+    "id": "b2",
+    "kind": "escalation",
+    "summary": "escalation of mock check",
+    "target_seconds": 126.0,
+    "clippable": true
+  },
+  {
+    "id": "b3",
+    "kind": "escalation",
+    "summary": "escalation of mock check",
+    "target_seconds": 117.6,
+    "clippable": true
+  },
+  {
+    "id": "b4",
+    "kind": "payoff",
+    "summary": "payoff of mock check",
+    "target_seconds": 67.2,
+    "clippable": true
+  },
+  {
+    "id": "b5",
+    "kind": "loop",
+    "summary": "loop of mock check",
+    "target_seconds": 33.6,
+    "clippable": false
+  }
+]

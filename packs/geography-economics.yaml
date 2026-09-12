@@ -15,3 +15,7 @@ sensitivity:
   reverence_required: false
   banned_depictions: []
   disclaimers: []
+demand:
+  # A floor, not a ranking device: below this a concept is not worth the
+  # electricity. Ranking happens in backlog.yaml by niche_score / gpu_cost.
+  min_revenue_per_gpu_hour: 20.0

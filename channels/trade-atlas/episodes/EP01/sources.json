@@ -1,0 +1,200 @@
+[
+  {
+    "id": "s1",
+    "tier": "statistical_agency",
+    "title": "Advisory to Shipping No. A-29-2026: Additional Measures to Address Reduced Precipitation in the Canal Watershed",
+    "url": "https://pancanal.com/wp-content/uploads/2026/08/ADV-29-2026-Additional-Measures-to-Address-Reduced-Precipitation-in-the-Canal-Watershed.pdf",
+    "publisher": "Panama Canal Authority (ACP), Vice Presidency for Operations",
+    "year": 2026,
+    "supports": "Of the 34 daily transit slots the canal offered from 4 September 2026 (falling to 32 from 15 September), exactly three are sold at auction \u2014 one Neopanamax, one Super and one Regular \u2014 so the auction clearing price is the price of the marginal ~9% of capacity, not of the average transit."
+  },
+  {
+    "id": "s2",
+    "tier": "statistical_agency",
+    "title": "Advisory to Shipping No. A-29-2026: Additional Measures to Address Reduced Precipitation in the Canal Watershed",
+    "url": "https://pancanal.com/wp-content/uploads/2026/08/ADV-29-2026-Additional-Measures-to-Address-Reduced-Precipitation-in-the-Canal-Watershed.pdf",
+    "publisher": "Panama Canal Authority (ACP), Vice Presidency for Operations",
+    "year": 2026,
+    "supports": "Across the May-to-August 2026 hydrological year, rainfall over the Canal watershed ran 34% below the historical average and watershed inflows ran 44% below it, and the ACP postponed its planned draft increases to 14.63 m and 14.48 m as a result."
+  },
+  {
+    "id": "s3",
+    "tier": "statistical_agency",
+    "title": "Official Tariff, Part I Marine Services, Item No. 1500.0000 \u2014 Fresh Water Surcharge",
+    "url": "https://pancanal.com/wp-content/uploads/2021/08/1500-fresh-water-feb23.pdf",
+    "publisher": "Panama Canal Authority (ACP)",
+    "year": 2023,
+    "supports": "The canal already sells fresh water at a published price: tariff item 1500.0000 charges every vessel over 300 feet LOA a fixed $10,000 fresh water surcharge plus a variable 0-10% of total tolls set by the sigmoid f(x) = 0.10 / (1 + e^(0.6(x-82))), where x is the official Gatun Lake depth in feet on the day before transit."
+  },
+  {
+    "id": "s4",
+    "tier": "statistical_agency",
+    "title": "Panama Canal Maintains Operational and Financial Strength (FY2025 results)",
+    "url": "https://pancanal.com/en/panama-canal-maintains-operational-and-financial-strength/",
+    "publisher": "Panama Canal Authority (ACP)",
+    "year": 2025,
+    "supports": "In FY2025 the canal ran 13,404 transits (3,342 Neopanamax, 10,062 Panamax), moved 489.1 million PC/UMS tons and took B/.5,705 million in revenue for a B/.4,134 million net profit \u2014 the denominator and numerator for the canal's average revenue per cubic metre of lockage water."
+  },
+  {
+    "id": "s5",
+    "tier": "statistical_agency",
+    "title": "Panama Canal Presents Financial Results for FY24 with a Focus on Sustainability and the Future",
+    "url": "https://pancanal.com/en/presents-financial-results-for-fy24-with-a-focus-on-sustainability-and-the-future/",
+    "publisher": "Panama Canal Authority (ACP)",
+    "year": 2024,
+    "supports": "The 2023-24 drought cut the canal to 9,944 deep-draft transits in FY2024, 21% below FY2023, and the ACP states it made those draft and transit cuts while 'prioritizing more than 50% of the population that relies on their water supply from Lakes Gatun and Alhajuela'."
+  },
+  {
+    "id": "s6",
+    "tier": "statistical_agency",
+    "title": "Beyond Scarcity: How the Canal Manages the Fresh Water Challenge",
+    "url": "https://pancanal.com/en/how-the-canal-manages-the-fresh-water-challenge/",
+    "publisher": "Panama Canal Authority (ACP)",
+    "year": 2023,
+    "supports": "During the 2023 drought the Gatun system was losing three hm3 a day more than it gained \u2014 ten hm3 of outflow against seven hm3 of inflow \u2014 while the same watershed supplied the equivalent of 80% of daily consumption in the provinces of Colon, Panama and West Panama, and 2023 watershed rainfall came in 25.6% below the 73-year average."
+  },
+  {
+    "id": "s7",
+    "tier": "statistical_agency",
+    "title": "The Panama Canal Adapts: Strategic Measures for Water Savings",
+    "url": "https://pancanal.com/en/the-panama-canal-adapts-strategic-measures-for-water-savings/",
+    "publisher": "Panama Canal Authority (ACP)",
+    "year": 2023,
+    "supports": "The ACP states that the canal watershed supplies 55% of Panama's population, and that from 1 November 2023 it cut average daily transits to 31 vessels \u2014 nine Neopanamax and 22 Panamax \u2014 to conserve that water."
+  },
+  {
+    "id": "s8",
+    "tier": "statistical_agency",
+    "title": "Rio Indio Lake Project Established as a Top Priority for National Water Security",
+    "url": "https://pancanal.com/en/rio-indio-lake-project-established-as-a-top-priority-for-national-water-security/",
+    "publisher": "Panama Canal Authority (ACP)",
+    "year": 2025,
+    "supports": "The ACP Board of Directors approved the Rio Indio reservoir on 21 February 2025 under Resolution No. ACP-JD-RM 25-1542, as part of a Water Projects Program intended to guarantee supply for over 50% of the country's population, to be built in approximately six years."
+  },
+  {
+    "id": "s9",
+    "tier": "statistical_agency",
+    "title": "Panama Canal Watershed Municipal and Industrial Water Demand Forecast Update Report 2020-2050, Table ES.5",
+    "url": "https://pancanal.com/wp-content/uploads/2024/04/2018-09_-MI-Water-Demands-Forecast-2020-2050-STANTEC.pdf",
+    "publisher": "Stantec for the Panama Canal Authority (ACP), using IDAAN and INEC data",
+    "year": 2018,
+    "supports": "The average price of water in Panama City in 2018 was $0.21 per cubic metre, calculated as total revenue divided by total volume of water sold across all customer categories \u2014 the household-side term in the episode's price ratio."
+  },
+  {
+    "id": "s10",
+    "tier": "statistical_agency",
+    "title": "Panama Canal Watershed Municipal and Industrial Water Demand Forecast Update Report 2020-2050, Table ES.5",
+    "url": "https://pancanal.com/wp-content/uploads/2024/04/2018-09_-MI-Water-Demands-Forecast-2020-2050-STANTEC.pdf",
+    "publisher": "Stantec for the Panama Canal Authority (ACP), using IDAAN and INEC data",
+    "year": 2015,
+    "supports": "The Panama Metro water service area produced 303 million gallons per day of drinking water in 2015 at 104 gallons per capita per day, while losing 40-55% of it as unaccounted-for water with only 57% of customers metered \u2014 so the city leaks away roughly 120-165 MGD, comparable to the lockage water of two to three Panamax transits a day."
+  },
+  {
+    "id": "s11",
+    "tier": "statistical_agency",
+    "title": "Panama Canal Watershed Municipal and Industrial Water Demand Forecast Update Report 2020-2050, Table ES.6",
+    "url": "https://pancanal.com/wp-content/uploads/2024/04/2018-09_-MI-Water-Demands-Forecast-2020-2050-STANTEC.pdf",
+    "publisher": "Stantec for the Panama Canal Authority (ACP)",
+    "year": 2018,
+    "supports": "The ACP's own consultant costed leak-and-loss reduction at 56 MGD for $2.6 million per MGD and metering 115,000 connections at 48 MGD for $1.2 million per MGD \u2014 about 104 MGD of recovered water for roughly $204 million in capital, against the $1.6 billion the state committed to Rio Indio."
+  },
+  {
+    "id": "s12",
+    "tier": "statistical_agency",
+    "title": "Review of Maritime Transport 2024, Chapter II: Navigating maritime chokepoints",
+    "url": "https://unctad.org/system/files/official-document/rmt2024ch2_en.pdf",
+    "publisher": "UN Trade and Development (UNCTAD)",
+    "year": 2024,
+    "supports": "The Panama Canal handles approximately 3% of global maritime trade volume, and by June 2024 its monthly ship transits were down by over half against the December 2021 peak, a decline UNCTAD attributes to reduced water levels rather than to demand."
+  },
+  {
+    "id": "s13",
+    "tier": "statistical_agency",
+    "title": "Panama Canal restrictions have led to fewer transits and reduced traffic (Today in Energy)",
+    "url": "https://www.eia.gov/Todayinenergy/detail.php?id=62408",
+    "publisher": "U.S. Energy Information Administration",
+    "year": 2024,
+    "supports": "Gatun Lake water levels in the 2023 drought were the lowest since at least 1965, and the ACP cut traffic to 24 crossings a day on 7 November 2023 against a typical 34 to 36."
+  },
+  {
+    "id": "s14",
+    "tier": "academic",
+    "title": "Drying of the Panama Canal in a Warming Climate",
+    "url": "https://doi.org/10.1029/2025GL117038",
+    "publisher": "Munoz, S. E., Lawrence, L. & Wang, S., Geophysical Research Letters (AGU)",
+    "year": 2025,
+    "supports": "A projection, not a measurement: simulating Gatun Lake levels with 27 downscaled climate models to 2100, the study finds disruptive low-water conditions become increasingly common under moderately high and high emissions scenarios but not under low-emissions ones \u2014 so the 2023-24 scarcity that set the auction price is structural rather than a one-off."
+  },
+  {
+    "id": "s15",
+    "tier": "reputable_press",
+    "title": "Panama Canal Auction Hits New Record at $5.3 Million",
+    "url": "https://gcaptain.com/panama-canal-auction-hits-new-record-at-5-3-million/",
+    "publisher": "gCaptain",
+    "year": 2026,
+    "supports": "SK Gas bid a record $5.3 million for the LPG carrier G. Spirit to transit on 1 September 2026, beating the $4.6 million record set earlier the same month, at a moment when unbooked vessels were waiting as long as 11 days."
+  },
+  {
+    "id": "s16",
+    "tier": "reputable_press",
+    "title": "Korean LPG Carrier Sets Record With $5.3M Panama Canal Slot Auction",
+    "url": "https://maritime-executive.com/article/korean-lpg-carrier-sets-record-with-5-3m-panama-canal-slot-auction",
+    "publisher": "The Maritime Executive",
+    "year": 2026,
+    "supports": "Independently confirms the $5.3 million bid for the G. Spirit on 1 September 2026 and names the previous record as $4.6 million for the G. Arete \u2014 the two data points at the top of the episode's auction price series."
+  },
+  {
+    "id": "s17",
+    "tier": "reputable_press",
+    "title": "Panama Canal Chief: Surge in Unreserved Ships Is Fueling Record Auction Prices",
+    "url": "https://gcaptain.com/bidders-for-panama-canal-auctions-up-to-nine-times-the-normal/",
+    "publisher": "gCaptain",
+    "year": 2026,
+    "supports": "The ACP Administrator gives the auction price series himself \u2014 a $135,000-$140,000 pre-conflict baseline, about $385,000 in March-April 2026, then $4.6 million and $5.3 million \u2014 and says 18 bidders chased one slot at the peak against a normal two to three, with 20-25% of vessels arriving unbooked, adding: 'We do not set prices; the market sets the price.'"
+  },
+  {
+    "id": "s18",
+    "tier": "reputable_press",
+    "title": "Panama Canal Auction Prices Soar as Wait Builds and Water Level Falls",
+    "url": "https://maritime-executive.com/article/panama-canal-auction-prices-soar-as-wait-builds-and-water-level-falls",
+    "publisher": "The Maritime Executive",
+    "year": 2026,
+    "supports": "Gatun Lake stood at 84.3 feet in early August 2026 and was projected at 82.8 feet by mid-October, against just over 79 feet in the June-October 2023 drought \u2014 the input to the ACP's published fresh-water surcharge curve."
+  },
+  {
+    "id": "s19",
+    "tier": "reputable_press",
+    "title": "Shipping Company Pays Record $5.3 Million To Transit Panama Canal Amid Rising Demand",
+    "url": "https://www.marineinsight.com/shipping-company-pays-record-5-3-million-to-transit-panama-canal-amid-rising-demand/",
+    "publisher": "Marine Insight",
+    "year": 2026,
+    "supports": "The record-bidding vessel G. Spirit is a 54,502 dwt Panama-flagged gas carrier making a northbound transit on 1 September 2026, and the median auction price as recently as February 2026 was about $55,000 \u2014 a roughly hundredfold move inside seven months."
+  },
+  {
+    "id": "s20",
+    "tier": "reputable_press",
+    "title": "In Rio Indio, farmers fight Panama Canal reservoir project \u2014 and displacement",
+    "url": "https://news.mongabay.com/2026/06/in-rio-indio-farmers-fight-panama-canal-reservoir-project-and-displacement/",
+    "publisher": "Mongabay",
+    "year": 2026,
+    "supports": "Rio Indio is contested, not settled: construction is due to start in 2027 and run four years, flooding 4,600 hectares and displacing 38 farming communities and about 2,000 residents, with an 8.7 km gravity tunnel to Gatun Lake, and opponents argue for expanding the Bayano reservoir instead and allege the ACP breached the Escazu Agreement."
+  },
+  {
+    "id": "s21",
+    "tier": "reputable_press",
+    "title": "Is the Panama Canal drying up? New research says climate change threatens a critical shipping route",
+    "url": "https://news.northeastern.edu/2025/09/24/is-the-panama-canal-drying-up",
+    "publisher": "Northeastern University News",
+    "year": 2025,
+    "supports": "Lead author Samuel Munoz states the canal's drought vulnerability increases with climate change and that 'if we're not going to mitigate emissions, then significant adaptation measures are needed to keep it functioning' \u2014 the quotable framing for the projection in s14, whose full text is paywalled."
+  },
+  {
+    "id": "s22",
+    "tier": "encyclopedia",
+    "title": "Water supply and sanitation in Panama",
+    "url": "https://en.wikipedia.org/wiki/Water_supply_and_sanitation_in_Panama",
+    "publisher": "Wikipedia (used only as a route to its cited source, ASEP)",
+    "year": 2012,
+    "supports": "Route to the older household tariff datum: a Panama City residential water and sewer bill for 30 cubic metres was 7.92 balboas in 2012, i.e. $0.26 per cubic metre, attributed to ASEP \u2014 the second, independent estimate that brackets the $0.21/m3 ACP figure in s9. The ASEP primary itself was not opened."
+  }
+]

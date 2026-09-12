@@ -1,0 +1,219 @@
+[
+  {
+    "beat_id": "b0",
+    "text": "cold_open of baseline check, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s0"
+  },
+  {
+    "beat_id": "b0",
+    "text": "cold_open of baseline check, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s0"
+  },
+  {
+    "beat_id": "b1",
+    "text": "promise of baseline check, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b1",
+    "text": "promise of baseline check, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b1",
+    "text": "promise of baseline check, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 4. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 5. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 6. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 7. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 8. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 9. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b2",
+    "text": "escalation of baseline check, part 10. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 4. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 5. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 6. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 7. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 8. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b3",
+    "text": "escalation of baseline check, part 9. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of baseline check, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of baseline check, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of baseline check, part 3. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of baseline check, part 4. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b4",
+    "text": "payoff of baseline check, part 5. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b5",
+    "text": "loop of baseline check, part 1. This is mock narration standing in for real prose.",
+    "pause_ms": 320,
+    "needs_citation": true,
+    "source_id": "s0"
+  },
+  {
+    "beat_id": "b5",
+    "text": "loop of baseline check, part 2. This is mock narration standing in for real prose.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": "s0"
+  }
+]

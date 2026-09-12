@@ -1,0 +1,541 @@
+[
+  {
+    "beat_id": "b1",
+    "text": "There is a formula that turns the depth of a lake into money.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b1",
+    "text": "Who writes something like that, and what happens when the lake falls?",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b1",
+    "text": "It is item 1500.0000 of the Panama Canal's official tariff.",
+    "pause_ms": 350,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b1",
+    "text": "Feed it the depth of Gatun Lake in feet, and it returns a fresh water surcharge of up to ten percent of everything a ship pays to cross.",
+    "pause_ms": 1200,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b1",
+    "text": "The curve bends at one number.",
+    "pause_ms": 900,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b1",
+    "text": "Eighty-two feet.",
+    "pause_ms": 1000,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b2",
+    "text": "By the end of this you will have three prices for one cubic metre of the same lake water.",
+    "pause_ms": 400,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b2",
+    "text": "What a household in Panama City paid for it.",
+    "pause_ms": 300,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b2",
+    "text": "What the canal earns on it on an average day.",
+    "pause_ms": 300,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b2",
+    "text": "And what a shipping line paid for it at auction, on the first of September 2026.",
+    "pause_ms": 800,
+    "needs_citation": true,
+    "source_id": "s15"
+  },
+  {
+    "beat_id": "b2",
+    "text": "They are not close.",
+    "pause_ms": 600,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b2",
+    "text": "And the highest is not what the canal charges anyone.",
+    "pause_ms": 400,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b2",
+    "text": "This is not a queue story; it is a water market, and the canal is the seller.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "In February 2026, the median price for an auctioned slot was about fifty-five thousand dollars.",
+    "pause_ms": 350,
+    "needs_citation": true,
+    "source_id": "s19"
+  },
+  {
+    "beat_id": "b3",
+    "text": "The canal sells most of its daily crossings by booking, but a few go to auction, and anyone can bid.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b3",
+    "text": "The canal's administrator puts the typical clearing price before the conflict at a hundred and thirty-five to a hundred and forty thousand.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s17"
+  },
+  {
+    "beat_id": "b3",
+    "text": "By March and April it was around three hundred and eighty-five thousand.",
+    "pause_ms": 600,
+    "needs_citation": true,
+    "source_id": "s17"
+  },
+  {
+    "beat_id": "b3",
+    "text": "Then the chart stops behaving like a chart and starts behaving like a panic.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "In August, a gas carrier called the G. Arete took a slot for four point six million dollars.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s16"
+  },
+  {
+    "beat_id": "b3",
+    "text": "That record lasted three weeks.",
+    "pause_ms": 800,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "On the first of September 2026, South Korea's SK group paid five point three million dollars to move one ship, the G. Spirit, northbound through the canal.",
+    "pause_ms": 1200,
+    "needs_citation": true,
+    "source_id": "s15"
+  },
+  {
+    "beat_id": "b3",
+    "text": "Not for the cargo.",
+    "pause_ms": 300,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "For the crossing.",
+    "pause_ms": 800,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "Three separate outlets confirm the figure.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s16"
+  },
+  {
+    "beat_id": "b3",
+    "text": "At the peak, eighteen bidders chased a single slot, against a normal two or three.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s17"
+  },
+  {
+    "beat_id": "b3",
+    "text": "Between a fifth and a quarter of ships were arriving with no booking at all.",
+    "pause_ms": 350,
+    "needs_citation": true,
+    "source_id": "s17"
+  },
+  {
+    "beat_id": "b3",
+    "text": "A ship that misses a booking either bids, or waits.",
+    "pause_ms": 350,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "Some of them waited eleven days.",
+    "pause_ms": 700,
+    "needs_citation": true,
+    "source_id": "s15"
+  },
+  {
+    "beat_id": "b3",
+    "text": "Ask the man who runs the canal how the price got there, and the answer is flat.",
+    "pause_ms": 600,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "We do not set prices; the market sets the price.",
+    "pause_ms": 1000,
+    "needs_citation": true,
+    "source_id": "s17"
+  },
+  {
+    "beat_id": "b3",
+    "text": "Eighteen bidders is not a shortage of ships.",
+    "pause_ms": 350,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b3",
+    "text": "It is a shortage of water, priced.",
+    "pause_ms": 800,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b4",
+    "text": "So what does five point three million dollars actually buy?",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b4",
+    "text": "One transit through the big locks spends an estimated two hundred thousand cubic metres of Gatun Lake.",
+    "pause_ms": 350,
+    "needs_citation": true,
+    "source_id": "s6"
+  },
+  {
+    "beat_id": "b4",
+    "text": "The Authority publishes its water in millions of cubic metres a day, not gallons per ship.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s6"
+  },
+  {
+    "beat_id": "b4",
+    "text": "No primary document of theirs states a per-transit figure, so hold that number as a band, not a measurement.",
+    "pause_ms": 800,
+    "needs_citation": true,
+    "source_id": "s6"
+  },
+  {
+    "beat_id": "b4",
+    "text": "Where the water comes from is not in doubt.",
+    "pause_ms": 400,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b4",
+    "text": "Gatun Lake is the drinking water for fifty-five percent of Panama's population.",
+    "pause_ms": 1000,
+    "needs_citation": true,
+    "source_id": "s7"
+  },
+  {
+    "beat_id": "b4",
+    "text": "The same lake.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b4",
+    "text": "In the drought of 2023, the system was losing ten million cubic metres a day and gaining seven.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s6"
+  },
+  {
+    "beat_id": "b4",
+    "text": "Rainfall came in a quarter below the seventy-three-year average.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s6"
+  },
+  {
+    "beat_id": "b4",
+    "text": "Lake levels were the lowest since at least 1965.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s13"
+  },
+  {
+    "beat_id": "b4",
+    "text": "On the seventh of November that year, the canal cut itself to twenty-four crossings a day, from a normal thirty-four.",
+    "pause_ms": 600,
+    "needs_citation": true,
+    "source_id": "s13"
+  },
+  {
+    "beat_id": "b4",
+    "text": "The 2024 financial year closed twenty-one percent below the one before it.",
+    "pause_ms": 700,
+    "needs_citation": true,
+    "source_id": "s5"
+  },
+  {
+    "beat_id": "b4",
+    "text": "And 2026 is not a recovery.",
+    "pause_ms": 350,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b4",
+    "text": "From May to August, rain ran thirty-four percent below average, and inflows forty-four percent below.",
+    "pause_ms": 600,
+    "needs_citation": true,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b4",
+    "text": "The Authority attributes this year to a forecast El Nino, which is weather.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s2"
+  },
+  {
+    "beat_id": "b4",
+    "text": "A 2025 study is a different thing entirely.",
+    "pause_ms": 350,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b4",
+    "text": "It simulated the lake with twenty-seven climate models, and found conditions like these become common under high emissions, and do not under low.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s14"
+  },
+  {
+    "beat_id": "b4",
+    "text": "That is a projection, not a forecast, and it is not this year's El Nino.",
+    "pause_ms": 800,
+    "needs_citation": true,
+    "source_id": "s14"
+  },
+  {
+    "beat_id": "b5",
+    "text": "Three prices, same cubic metre.",
+    "pause_ms": 800,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "In 2018, water in Panama City worked out at twenty-one cents a cubic metre.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s9"
+  },
+  {
+    "beat_id": "b5",
+    "text": "That is total revenue divided by total volume sold, and it is eight years old.",
+    "pause_ms": 700,
+    "needs_citation": true,
+    "source_id": "s9"
+  },
+  {
+    "beat_id": "b5",
+    "text": "Second bar, and this is the one nobody else has drawn.",
+    "pause_ms": 600,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "In financial year 2025 the canal ran thirteen thousand four hundred and four transits and took five point seven billion balboas.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b5",
+    "text": "Divide that by the water those transits spent, and the canal's own average lands near two dollars thirteen a cubic metre.",
+    "pause_ms": 800,
+    "needs_citation": true,
+    "source_id": "s4"
+  },
+  {
+    "beat_id": "b5",
+    "text": "Third bar.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "Five point three million dollars, divided by the water one transit spends, is about twenty-seven dollars a cubic metre.",
+    "pause_ms": 1200,
+    "needs_citation": true,
+    "source_id": "s15"
+  },
+  {
+    "beat_id": "b5",
+    "text": "Now the caveat that keeps this honest.",
+    "pause_ms": 400,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "Of the canal's thirty-four daily slots, exactly three go to auction.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b5",
+    "text": "So twenty-seven dollars prices the last nine percent of capacity, bid up by the ships that arrived unbooked.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s1"
+  },
+  {
+    "beat_id": "b5",
+    "text": "It is a scarcity signal, not what the canal charges the fleet.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "But even as a signal, it is roughly a hundred times what the household paid.",
+    "pause_ms": 1000,
+    "needs_citation": true,
+    "source_id": "s9"
+  },
+  {
+    "beat_id": "b5",
+    "text": "And here is the part the auction only implies.",
+    "pause_ms": 600,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "The tariff publishes it.",
+    "pause_ms": 900,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "Put August's lake level, eighty-four point three feet, into item 1500.0000, and the surcharge is two percent of tolls.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s18"
+  },
+  {
+    "beat_id": "b5",
+    "text": "At eighty-two feet, the bend in the curve, it is five.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b5",
+    "text": "At the just-over-seventy-nine feet of the 2023 floor, it is nearly nine.",
+    "pause_ms": 400,
+    "needs_citation": true,
+    "source_id": "s18"
+  },
+  {
+    "beat_id": "b5",
+    "text": "Plus a flat ten thousand dollars on every ship longer than three hundred feet.",
+    "pause_ms": 800,
+    "needs_citation": true,
+    "source_id": "s3"
+  },
+  {
+    "beat_id": "b5",
+    "text": "The market took until September 2026 to price this water.",
+    "pause_ms": 400,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b5",
+    "text": "The canal had already written the price down.",
+    "pause_ms": 1000,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b6",
+    "text": "One more thing about the record.",
+    "pause_ms": 400,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b6",
+    "text": "The lake did not fall five point three million dollars' worth in a week.",
+    "pause_ms": 700,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b6",
+    "text": "When the canal's administrator names the old price, a hundred and thirty-five thousand dollars, he dates it to before a conflict on the other side of the world.",
+    "pause_ms": 800,
+    "needs_citation": true,
+    "source_id": "s17"
+  },
+  {
+    "beat_id": "b6",
+    "text": "In a strait that never actually closed.",
+    "pause_ms": 1000,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b6",
+    "text": "So the question this episode leaves open is not about rain at all.",
+    "pause_ms": 600,
+    "needs_citation": false,
+    "source_id": null
+  },
+  {
+    "beat_id": "b6",
+    "text": "How does a strait that stayed open set the price of Panamanian water?",
+    "pause_ms": 1000,
+    "needs_citation": false,
+    "source_id": null
+  }
+]

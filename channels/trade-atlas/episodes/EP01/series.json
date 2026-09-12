@@ -1,0 +1,61 @@
+{
+  "topic": "Why the world's busiest shipping shortcut is running out of water",
+  "episodes": [
+    {
+      "number": 1,
+      "title": "The Canal Sells Water, Not Passage",
+      "promise": "The canal's own tariff prices its fresh water",
+      "arc_position": "establishes - sets the channel's method: every chokepoint has one physical constraint, and somewhere there is a published price for it. Panama's is item 1500.0000 of the ACP tariff, a logistic curve that turns Gatun Lake's depth in feet into a percentage of every ship's tolls, inflecting at 82 feet. Three bars in one chart carry the episode: $0.21/m3 for a Panama City household in 2018, roughly $2.13/m3 as the canal's average realised price in FY2025, and about $27/m3 implied by the $5.3m slot the G. Spirit bought on 1 September 2026 - a scarcity signal on the marginal three slots of thirty-four, not the fleet price, and the script says so.",
+      "cliffhanger": "That record bid landed weeks after a war 12,000 km away, in a strait that never actually closed. Why did Hormuz set the price of Panamanian rain?"
+    },
+    {
+      "number": 2,
+      "title": "The Strait That Never Closed",
+      "promise": "A strait that never closed repriced everything",
+      "arc_position": "complicates - the constraint at Hormuz is not water but the priced expectation of a closure that has never happened in fifty years. The chart is war-risk premium as a percentage of hull value against actual tonnage moved, which barely moves. It shows the audience that a chokepoint can be metered by insurers rather than by an authority, and it explains the shock that arrives in episode one's auction data from the other side of the planet.",
+      "cliffhanger": "When the premium beats the detour, ships stop paying and start sailing. Africa is about to get very busy, and nobody has counted what that costs."
+    },
+    {
+      "number": 3,
+      "title": "Going Around Africa",
+      "promise": "Skipping Suez costs ships, not miles",
+      "arc_position": "complicates - the escape route has a price of its own, and it is denominated in vessels rather than distance. Rerouting Red Sea traffic around the Cape adds roughly ten days each way, and the chart converts that into tonne-miles and effective fleet capacity absorbed, showing that a detour is a quiet withdrawal of ships from the world market. The constraint stops looking like a place and starts looking like a balance sheet.",
+      "cliffhanger": "The detour ate the world's spare ships. So who decided how many ships exist, and how big each one is? A set of lock chambers poured in 1914."
+    },
+    {
+      "number": 4,
+      "title": "The Locks Designed the Fleet",
+      "promise": "Chokepoints, not shipyards, decide how big ships get",
+      "arc_position": "reverses - the run has treated chokepoints as obstacles that trade runs into. This episode turns that around: Panamax, Neopanamax, Suezmax and Malaccamax are chamber walls and seabed depths translated into steel, so the chokepoints specified the world fleet decades before the cargo existed. The chart is hull dimensions against the physical limit that produced them, and it retro-explains why episode three's detour had no slack in it.",
+      "cliffhanger": "One chokepoint has no depth limit, no queue and no war, and it still meters a fifth of the world's wheat. Its constraint is written on paper."
+    },
+    {
+      "number": 5,
+      "title": "The Chokepoint Made of Paper",
+      "promise": "A 1936 treaty still meters the world's grain",
+      "arc_position": "complicates - the Turkish Straits show a constraint written in law rather than hydrology, and legal constraints price differently: discontinuously, politically, and with no tariff curve to read. Charting grain tonnage and freight rates against treaty and wartime events tests the channel's method against the case where the method is hardest to apply, which is what stops the series being a formula.",
+      "cliffhanger": "A treaty can be renegotiated in a season. A watershed cannot. Which is why Panama is spending 1.6 billion dollars to buy itself more rain."
+    },
+    {
+      "number": 6,
+      "title": "Buying Water You Already Have",
+      "promise": "Panama buys new water while leaking treated water",
+      "arc_position": "reverses - the fix for a chokepoint turns out not to be at the chokepoint. Rio Indio costs about $1.6bn, floods 4,600 hectares and displaces some 2,000 people across 38 communities, and it is contested rather than settled. Against it, the ACP's own consultant costed leak reduction and metering at roughly 104 MGD recovered for about $204m. Two bars, one eighth the price, and the episode lets the audience see the state choose concrete over meters.",
+      "cliffhanger": "If the cheapest new water is the water you already lost, that test should work anywhere. Run it on a river that bills European factories by the centimetre."
+    },
+    {
+      "number": 7,
+      "title": "The River That Bills by the Centimetre",
+      "promise": "Europe's factories pay a surcharge for shallow rivers",
+      "arc_position": "pays off - episode one's shape returns inland and in a rich economy: the Rhine gauge at Kaub is a water level that converts directly into a published low-water surcharge on freight, and through it into chemicals, fuel and steel prices. Same curve, no ocean, no canal authority, which is the proof that the channel found a mechanism rather than a Panama story.",
+      "cliffhanger": "Seven constraints, seven prices, seven different units. Put them in the same units and the whole map rearranges itself."
+    },
+    {
+      "number": 8,
+      "title": "The Atlas of Prices",
+      "promise": "Every chokepoint on one chart, priced",
+      "arc_position": "pays off and loops - the series payoff. Every constraint met so far is converted into dollars per unit of the physical thing that is actually scarce - water, hull depth, sea room, treaty days, river centimetres - and ranked on a single chart, which is the artefact the channel exists to produce and the thing the Chokepoint Data Pack sells.",
+      "cliffhanger": "The most expensive constraint on the chart is not at sea at all. Next series leaves the water, and episode one's canal reappears on the wrong side of the ledger."
+    }
+  ]
+}

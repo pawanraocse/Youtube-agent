@@ -1,0 +1,44 @@
+[
+  {
+    "id": "b1",
+    "kind": "cold_open",
+    "summary": "No intro, no channel bumper. Frame one is a line of algebra lifted from a shipping tariff: f(x) = 0.10 / (1 + e^(0.6(x-82))), captioned ACP Official Tariff, item 1500.0000. By second four the narrator says what it does - it turns the depth of a lake, measured in feet, into a percentage of what every large ship pays to cross Panama. By second seven the curve draws itself across the frame and bends hard at one value, 82. The unanswered question, asked out loud and left open: somebody wrote a formula for the price of rain, and what happens when the lake falls past 82 feet? Chart shot, one curve, one number. Everything after this beat exists to answer that question.",
+    "target_seconds": 30.0,
+    "clippable": true
+  },
+  {
+    "id": "b2",
+    "kind": "promise",
+    "summary": "The eight-word promise opened into a sentence the viewer can hold for seven minutes: the Panama Canal's own tariff prices its fresh water, and by the end you will have three different prices for one cubic metre of the same lake - what a Panama City household paid for it, what the canal earns on it on an average day, and what a shipping line paid for it at auction on the first of September 2026. Says the counter-intuitive fact in plain words this early: this is not a story about a queue of ships, it is a story about a water market, and the canal is the seller. Also plants the honesty rule the episode runs on - every number arrives with its year and its kind, measurement or estimate.",
+    "target_seconds": 35.0,
+    "clippable": false
+  },
+  {
+    "id": "b3",
+    "kind": "escalation",
+    "summary": "The price series, charted, and it is nearly vertical. A median auction slot went for about fifty-five thousand dollars as recently as February 2026. The canal's own administrator puts the typical pre-conflict clearing price at a hundred and thirty-five to a hundred and forty thousand, and around three hundred and eighty-five thousand by March and April. Then four point six million for the G. Arete, and on the first of September 2026, five point three million dollars for a single northbound slot for the gas carrier G. Spirit, bid by South Korea's SK group - a record confirmed by three separate outlets. Eighteen bidders chased one slot at the peak against a normal two or three, with a fifth to a quarter of ships arriving with no booking at all and unbooked vessels waiting as long as eleven days. The beat lands on the administrator's own line: we do not set prices, the market sets the price. Stakes raised from millions to a question - what exactly did five point three million dollars buy?",
+    "target_seconds": 110.0,
+    "clippable": true
+  },
+  {
+    "id": "b4",
+    "kind": "escalation",
+    "summary": "The answer to what the money buys is water, and the water is somebody's drinking water. A single large-lock transit spends roughly two hundred thousand cubic metres of Gatun Lake - flagged on screen as an estimate with a band, because no primary Canal Authority document states a per-transit figure, and it is only consistent with the Authority's own published hydrology, not confirmed by it. That same lake supplies fifty-five percent of Panama's population. Then the water budget failing: in the 2023 drought the system lost ten cubic hectometres a day against seven coming in, on rainfall a quarter below the seventy-three-year average, with lake levels the lowest since at least 1965; transits were cut to twenty-four a day against a typical thirty-four to thirty-six, and FY2024 closed twenty-one percent below the year before. Then 2026: rainfall thirty-four percent below average from May to August, inflows forty-four percent below. Two separations the beat makes explicitly and does not blur - the Authority attributes this year's squeeze to a forecast El Nino, which is weather; and a 2025 study projecting Gatun Lake with twenty-seven climate models finds these conditions become common under high-emissions pathways and not under low ones, which is a conditional projection to 2100, not a forecast and not this year's event.",
+    "target_seconds": 95.0,
+    "clippable": true
+  },
+  {
+    "id": "b5",
+    "kind": "payoff",
+    "summary": "The three bars, then the curve, and the cold open gets its answer. Bar one: twenty-one cents per cubic metre, what a Panama City household's water worked out to in 2018, captioned with its year and its age. Bar two, the one no competitor has drawn: divide the canal's FY2025 revenue by the lockage water behind its 13,404 transits and the canal's own average realised price is about two dollars thirteen a cubic metre. Bar three: five point three million divided by the water that transit spends is about twenty-seven dollars a cubic metre - and the beat immediately says what that is and is not, because only three of the canal's thirty-four daily slots go to auction. That is the price of the marginal nine percent of capacity, a scarcity signal, not what the canal charges the fleet. Roughly a hundred times the household figure, given as an order of magnitude and never as a decimal. Then back to frame one: the auction only implied a price, but the tariff publishes one. At 84.3 feet in August 2026 the fresh water surcharge was two percent of tolls; at 82 feet, the bend in the curve, it is five; at the just-over-79 feet of the 2023 drought floor, 8.6. Plus a flat ten thousand dollars on every ship over 300 feet long. The canal wrote down the price of its own scarcity years before the market found the number.",
+    "target_seconds": 115.0,
+    "clippable": true
+  },
+  {
+    "id": "b6",
+    "kind": "loop",
+    "summary": "The open question that episode two answers, stated as a question and nothing else - no subscribe, no stay tuned. The record bid landed on the first of September 2026, and the canal's own administrator dates the old hundred-and-thirty-five-thousand-dollar price to before a conflict twelve thousand kilometres away, in a strait that never actually closed. The lake did not fall five point three million dollars' worth in a week. So the last sentence of the episode is the question itself: how does a strait that stayed open all along set the price of Panamanian rain?",
+    "target_seconds": 35.0,
+    "clippable": false
+  }
+]

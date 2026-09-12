@@ -61,6 +61,7 @@ class Pack:
     narrative: dict
     critic: dict
     sensitivity: dict
+    demand: dict = field(default_factory=dict)
 
     @staticmethod
     def load(name: str) -> "Pack":
@@ -71,6 +72,7 @@ class Pack:
             narrative=d.get("narrative", {}),
             critic=d.get("critic", {}),
             sensitivity=d.get("sensitivity", {}),
+            demand=d.get("demand", {}),
         )
 
     def rubric(self) -> dict:
