@@ -13,7 +13,7 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
-from studio.core.config import Format, licences
+from studio.core.config import Format, PlatformSpec, licences
 
 
 @dataclass(frozen=True)
@@ -61,24 +61,71 @@ def check_picture(shots: list[dict], registered_character_ids: set[str],
     return out
 
 
-def check_master(master: Path, platforms: list[str], music_track: dict | None) -> list[Finding]:
+def check_master(master: Path, platforms: list[str], music_track: dict | None,
+                 spec: "PlatformSpec | None" = None) -> list[Finding]:
+    """The production standard, enforced. Every number here is a target the plan
+    states, so a master that misses one does not reach LOCK 3."""
     out: list[Finding] = []
     if not master.exists():
         return [Finding("master", f"missing file {master}")]
-    stats = _loudness(master)
-    if stats["input_i"] > -12.0 or stats["input_i"] < -17.0:
-        out.append(Finding("loudness", f"integrated {stats['input_i']:.1f} LUFS, target -14"))
-    if stats["input_tp"] > -1.0:
-        out.append(Finding("true_peak", f"{stats['input_tp']:.1f} dBTP exceeds -1.0"))
+
+    a = _loudness(master)
+    if not -17.0 <= a["input_i"] <= -12.0:
+        out.append(Finding("loudness", f"integrated {a['input_i']:.1f} LUFS, target -14"))
+    if a["input_tp"] > -1.0:
+        out.append(Finding("true_peak", f"{a['input_tp']:.1f} dBTP exceeds -1.0"))
+    if a["input_lra"] > 7.0:
+        out.append(Finding(
+            "loudness_range",
+            f"LRA {a['input_lra']:.1f} exceeds 7 — quiet moments will vanish on a phone speaker"))
+
+    # Phone speakers are mono. A mix that only survives in stereo does not survive.
+    drop = a["input_i"] - _mono_loudness(master)
+    if drop > 3.0:
+        out.append(Finding(
+            "mono_folddown",
+            f"{drop:.1f} LU lost folding to mono — phase cancellation is eating the dialogue"))
+
+    v = _video_props(master)
+    if spec is not None and (v["width"], v["height"]) != (spec.width, spec.height):
+        out.append(Finding("geometry",
+                           f"{v['width']}x{v['height']} is not the {spec.name} spec "
+                           f"{spec.width}x{spec.height}"))
+    if v["fps"] < 29.0 and spec is not None and spec.height > spec.width:
+        out.append(Finding("framerate", f"{v['fps']:.2f} fps — vertical judders below 30"))
+
+    frozen = _freeze_spans(master, threshold_s=2.5)
+    if frozen:
+        out.append(Finding("static_frame",
+                           f"{len(frozen)} frame(s) held beyond 2.5 s (first at {frozen[0]:.1f}s) "
+                           "— a still frame reads as a slideshow"))
+
     if music_track is not None:
         cleared = set(music_track.get("cleared_for", []))
-        for p in platforms:
-            if p not in cleared:
+        for pl in platforms:
+            if pl not in cleared:
                 out.append(Finding(
                     "music_clearance",
-                    f"track {music_track.get('id')!r} is not cleared for {p} — "
-                    "YouTube Audio Library terms do not carry to other platforms",
-                ))
+                    f"track {music_track.get('id')!r} is not cleared for {pl} — "
+                    "YouTube Audio Library terms do not carry to other platforms"))
+    return out
+
+
+def check_captions(captions: list[dict], spec: "PlatformSpec") -> list[Finding]:
+    """Captions must clear the platform's own UI, or the viewer reads half of them."""
+    out: list[Finding] = []
+    safe = spec.caption_safe_area
+    min_px = 56 * spec.width / 1080
+    for c in captions:
+        y = c.get("y_frac", 0.5)
+        if y < safe.get("top", 0.0) or y > 1 - safe.get("bottom", 0.0):
+            out.append(Finding("caption_safe_area",
+                               f"caption at y={y:.2f} sits under the platform UI"))
+        if c.get("size_px", min_px) < min_px:
+            out.append(Finding("caption_size",
+                               f"{c['size_px']}px is below the {min_px:.0f}px floor at this width"))
+        if len(c.get("lines", [])) > 2:
+            out.append(Finding("caption_lines", f"{len(c['lines'])} lines, maximum is 2"))
     return out
 
 
@@ -125,4 +172,39 @@ def _loudness(path: Path) -> dict:
     )
     blob = proc.stderr[proc.stderr.rfind("{"): proc.stderr.rfind("}") + 1]
     data = json.loads(blob)
-    return {"input_i": float(data["input_i"]), "input_tp": float(data["input_tp"])}
+    return {"input_i": float(data["input_i"]), "input_tp": float(data["input_tp"]),
+            "input_lra": float(data["input_lra"])}
+
+
+def _mono_loudness(path: Path) -> float:
+    proc = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
+         "-af", "pan=mono|c0=0.5*c0+0.5*c1,loudnorm=I=-14:TP=-1:LRA=11:print_format=json",
+         "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    blob = proc.stderr[proc.stderr.rfind("{"): proc.stderr.rfind("}") + 1]
+    return float(json.loads(blob)["input_i"])
+
+
+def _video_props(path: Path) -> dict:
+    proc = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=width,height,avg_frame_rate", "-of", "json", str(path)],
+        check=True, capture_output=True, text=True,
+    )
+    st = json.loads(proc.stdout)["streams"][0]
+    num, _, den = st["avg_frame_rate"].partition("/")
+    fps = float(num) / float(den or 1)
+    return {"width": st["width"], "height": st["height"], "fps": fps}
+
+
+def _freeze_spans(path: Path, *, threshold_s: float) -> list[float]:
+    """Timestamps where picture stopped moving for longer than the limit."""
+    proc = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
+         "-vf", f"freezedetect=n=-60dB:d={threshold_s}", "-map", "0:v", "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    return [float(line.split("freeze_start:")[1].strip())
+            for line in proc.stderr.splitlines() if "freeze_start:" in line]
