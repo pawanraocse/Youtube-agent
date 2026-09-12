@@ -129,13 +129,22 @@ is no swallowing anywhere.
 - `comfy/`, `characters/` and `shows/` are empty directories the plan names but M0 did
   not populate.
 
-## 6. Needs clarification
+## 6. Resolved by the developer (2026-09-12)
 
-- **Deployment target.** Nothing in the repository says where this runs beyond the local
-  WSL2 machine, or whether renders are ever expected to leave it.
-- **Whether the pipeline is also a product.** The plan calls operating it as a service
-  the highest-probability revenue in the document, which would change API stability
-  requirements considerably. Nothing in the code assumes either way.
-- **Retention policy for generated assets.** The content-addressed store grows without
-  bound and nothing prunes it; at 6 episodes × several channels per month this becomes a
-  real question within a year.
+**Local only.** Nothing leaves this machine except finished uploads through the platform
+APIs. There is no cloud render path, and adding one would break the zero-marginal-cost
+constraint in §1 — treat a proposal to burst to a rented GPU as a change to the project's
+premise, not an optimisation.
+
+**Own tooling, not a product.** No multi-tenancy, no auth, no billing, no API stability
+obligation. Optimise for speed of change: refactor the CLI surface freely, and do not add
+abstraction whose only justification is a hypothetical second user. The plan notes that
+operating this for others is the highest-probability revenue in the document; that
+remains a business option and is explicitly *not* a design constraint today.
+
+**Assets: keep masters, prune intermediates.** Once an episode reaches `PUBLISHED`, the
+per-shot stills, clips and chunk WAVs are deletable; masters, verticals, thumbnails and
+every database row are kept. Content addressing means a pruned intermediate can be
+regenerated from the same prompt at the same hash, so pruning costs GPU time and nothing
+else. Not yet implemented — no `studio prune` exists, and the store currently grows
+without bound.
