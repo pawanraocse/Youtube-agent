@@ -8,3 +8,6 @@ music/*.mp3
 music/*.wav
 *.egg-info/
 .pytest_cache/
+
+# agent-spec generated state
+.agent-spec/graph/knowledge-graph.json
