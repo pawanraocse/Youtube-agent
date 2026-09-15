@@ -10,7 +10,7 @@ from __future__ import annotations
 from enum import StrEnum
 from typing import Literal
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 
 class Stage(StrEnum):
@@ -208,6 +208,83 @@ class Shot(BaseModel):
         if start is not None and v <= start:
             raise ValueError(f"end_ms {v} must exceed start_ms {start}")
         return v
+
+
+class Callout(BaseModel):
+    """A labelled point on a line chart, revealed as the line reaches it."""
+
+    x: float | str
+    text: str = Field(min_length=1)
+
+
+class ChartSpec(BaseModel):
+    """One animated chart shot — the picture of a data-explainer episode.
+
+    Every chart carries a source, because a number on screen is a claim exactly as
+    a number in narration is. The credit is rendered into the frame, not left to a
+    description nobody reads.
+    """
+
+    kind: Literal["bar", "line", "stat"]
+    source_ids: list[str] = Field(
+        min_length=1,
+        description="Every source a figure on screen comes from. A comparison usually has several.",
+    )
+    source_label: str = Field(
+        min_length=1, description="Rendered on screen, e.g. 'Panama Canal Authority, FY2025'."
+    )
+    title: str = ""
+    subtitle: str = ""
+    unit: str = Field(default="", description="'$' prefixes, '%' suffixes, anything else follows a space.")
+    # bar
+    labels: list[str] = Field(default_factory=list)
+    values: list[float] = Field(default_factory=list)
+    display: list[str] | None = Field(
+        default=None,
+        description="Exact strings per bar, e.g. '~$27' where a figure is an estimate.",
+    )
+    highlight: int | None = None
+    # line
+    x: list[float | str] = Field(default_factory=list)
+    y: list[float] = Field(default_factory=list)
+    x_label: str = ""
+    callouts: list[Callout] = Field(default_factory=list)
+    # stat
+    value_text: str = ""
+    caption: str = ""
+
+    @model_validator(mode="after")
+    def _shape(self) -> "ChartSpec":
+        if not all(sid.strip() for sid in self.source_ids):
+            raise ValueError("an empty source id cites nothing")
+        if self.kind == "bar":
+            if not self.labels or len(self.labels) != len(self.values):
+                raise ValueError(f"a bar chart needs one value per label, got "
+                                 f"{len(self.labels)} labels and {len(self.values)} values")
+            if self.display is not None and len(self.display) != len(self.values):
+                raise ValueError("display must give one string per bar")
+            if self.highlight is not None and not 0 <= self.highlight < len(self.values):
+                raise ValueError(f"highlight {self.highlight} is not a bar index")
+        elif self.kind == "line":
+            if len(self.x) < 2 or len(self.x) != len(self.y):
+                raise ValueError("a line chart needs at least two points and one y per x")
+            numeric = [isinstance(v, (int, float)) for v in self.x]
+            if any(numeric) and not all(numeric):
+                raise ValueError("x must be all numbers or all category labels, not a mix")
+            if all(numeric):
+                if any(b <= a for a, b in zip(self.x, self.x[1:])):
+                    raise ValueError("numeric x must strictly increase")
+                lo, hi = self.x[0], self.x[-1]
+                for c in self.callouts:
+                    if isinstance(c.x, str) or not lo <= c.x <= hi:
+                        raise ValueError(f"callout at {c.x!r} is outside the x range {lo}..{hi}")
+            else:
+                for c in self.callouts:
+                    if c.x not in self.x:
+                        raise ValueError(f"callout at {c.x!r} names no category on the x axis")
+        elif not self.value_text:
+            raise ValueError("a stat card needs value_text")
+        return self
 
 
 class Packaging(BaseModel):

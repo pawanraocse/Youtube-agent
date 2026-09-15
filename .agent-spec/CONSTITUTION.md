@@ -27,6 +27,11 @@ The real list from `pyproject.toml`, not what is conventional for the stack:
 
 - `pydantic>=2.7` — validation at the skill/CLI boundary only
 - `pyyaml>=6.0` — config trees
+- `matplotlib>=3.8` — animated charts for data-explainer shots. Added 2026-09-15 for
+  M1.5: that format's picture is charts, and the alternative — asking an image model
+  to draw them — spends GPU on something a deterministic plotter does exactly, for
+  free, and with numbers that are actually the cited numbers. Object API and the Agg
+  canvas only, never `pyplot`, whose global state is unsafe under B6's thread pool.
 - `pytest>=8.0` — dev only
 
 That is everything. There is no LangChain, no LangGraph, no Temporal, no ORM, no

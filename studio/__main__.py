@@ -12,12 +12,14 @@ import json
 import sys
 from pathlib import Path
 
+from pydantic import ValidationError
+
 from studio.checks import check_cohort, check_licences
 from studio.core import briefs
 from studio.core.briefs import SPECS
 from studio.core.cas import AssetStore
-from studio.core.config import ROOT, Format, Pack
-from studio.core.schemas import Stage
+from studio.core.config import ROOT, Format, Pack, PlatformSpec
+from studio.core.schemas import ChartSpec, Stage
 from studio.core.state import Store
 from studio.pipeline import AwaitingAgent, Context, GateBlocked, run, step_hash
 
@@ -142,6 +144,24 @@ def cmd_ingest(a: argparse.Namespace) -> int:
         store.close()
 
 
+def cmd_render_chart(a: argparse.Namespace) -> int:
+    """Render one chart spec to a clip, so an agent or a person can see a chart
+    before it is placed in a shot list."""
+    try:
+        spec = ChartSpec.model_validate_json(Path(a.input).read_text())
+    except ValidationError as exc:
+        _emit(a, {"ok": False, "findings": [
+            f"{'.'.join(str(p) for p in e['loc']) or '<root>'}: {e['msg']}" for e in exc.errors()]})
+        return 4
+    from studio.render.charts import render_chart   # matplotlib is slow to import
+    plat = PlatformSpec.load(a.platform)
+    out = render_chart(spec, Path(a.out), duration_ms=a.duration_ms, width=plat.width,
+                       height=plat.height, safe_area=plat.caption_safe_area)
+    _emit(a, {"ok": True, "out": str(out), "platform": plat.name,
+              "width": plat.width, "height": plat.height, "duration_ms": a.duration_ms})
+    return 0
+
+
 def cmd_status(a: argparse.Namespace) -> int:
     store = Store(DB)
     eps = store.conn.execute(
@@ -228,6 +248,13 @@ def main(argv: list[str] | None = None) -> int:
     ing.add_argument("--stage", required=True)
     ing.add_argument("--input", required=True)
     ing.set_defaults(fn=cmd_ingest)
+
+    rc = sub.add_parser("render-chart", help="render one chart spec to an MP4")
+    rc.add_argument("--input", required=True)
+    rc.add_argument("--out", required=True)
+    rc.add_argument("--duration-ms", type=int, default=4000)
+    rc.add_argument("--platform", default="youtube-long")
+    rc.set_defaults(fn=cmd_render_chart)
 
     s = sub.add_parser("status", help="where every episode is")
     s.set_defaults(fn=cmd_status)
