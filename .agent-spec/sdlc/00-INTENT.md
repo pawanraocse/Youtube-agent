@@ -5,8 +5,10 @@ Quoted text keeps the originator's wording; only spelling, capitals and dashes a
 normalised, and `[brackets]` mark the places a typo had to be read. Unquoted text is a paraphrase and says
 so. Nothing here is a requirement or a design.
 
-**Originator:** Pawan · **Captured:** 2026-09-15 · **Updated:** 2026-09-15 with the originator's answers · **Drawn from:** the originator's messages
-from 2026-09-12 to 2026-09-15, while this repository was planned and built.
+**Originator:** Pawan · **Captured:** 2026-09-15 · **Updated:** 2026-09-15 with the
+originator's answers, and 2026-09-16 with a reference product and the story workflow
+(see the last section) · **Drawn from:** the originator's messages from 2026-09-12 to
+2026-09-16, while this repository was planned and built.
 
 ---
 
@@ -173,3 +175,41 @@ the originator wrote their own words, those are quoted instead.
 | A-20 | How often does the first channel publish a new long video? | "Two a week" — two long videos a week, with short clips cut from each automatically. |
 | A-21 | Hindi versions — when and how? | "Later, as a dub" — English first; once English works, Hindi narration is added to the same videos rather than a separate channel. |
 | A-22 | Which accounts publish the videos? | "Create new ones" — new brand accounts on YouTube, Facebook, Instagram and TikTok, kept apart from the originator's personal accounts. |
+
+## A reference product and the story workflow (2026-09-16)
+
+The originator pointed at invideo.io as close to the target, to learn from rather than
+copy:
+
+> "this is very similar what I am trying to achieve — use this as learning to update the
+> intent" *(2026-09-16)*
+
+What that product does, paraphrased from its own page (not the originator's words, and
+not a requirement): an idea or a script becomes a shot-by-shot storyboard the user tweaks
+*before* anything is generated; generation then fills a real multitrack timeline the user
+can take over "at any frame"; role-specific agents (a cinematographer, a sound designer,
+and so on) do the repetitive work while the person keeps creative control. It is a
+reference for the *shape* of the workflow — plan, review, then generate — and the same
+"reference, never copy" rule in **Constraints** applies to it.
+
+The originator then described the story-channel flow they want, in their own words:
+
+> "this [is] for details and character in beg[inning] — if stories, generate story and ask
+> input on each character — decide timeline and generate videos" *(2026-09-16)*
+
+Paraphrased, and marked as such: for a character-driven story channel the pipeline should
+
+1. **generate the story** from the topic (or take the originator's own story — see A-2);
+2. **stop for input on each character** near the beginning — the originator reviews and
+   shapes every character before production, which is where the reusable character
+   definition of the **What** section and the per-character voice audition of A-15 are
+   settled;
+3. **decide the timeline** — a shot-by-shot / beat plan the originator sees and can change
+   before rendering, the storyboard-before-generate step the reference product makes its
+   centre;
+4. **generate the videos** once the characters and the timeline are agreed.
+
+This does not replace the three approval checks of A-14; it says the *first* of them, the
+early check, is per-character and happens against a visible timeline rather than a script
+alone. It is a workflow clarification for the story format, captured here for gate 0 to
+turn into requirements — nothing here is a design.
