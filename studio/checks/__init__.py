@@ -228,14 +228,26 @@ def check_cohort(rows: list[dict]) -> dict:
     return verdicts
 
 
+def _loudnorm_measurement(proc: "subprocess.CompletedProcess[str]", path: Path) -> dict:
+    """The loudnorm JSON block ffmpeg prints to stderr, or a clear error naming the
+    file. These probes cannot use check=True — loudnorm exits 0 and writes to stderr —
+    so a failed encode has to be caught here, or json.loads raises on an empty slice
+    and a broken master looks like a broken check (was DEBT-001)."""
+    start, end = proc.stderr.rfind("{"), proc.stderr.rfind("}")
+    if proc.returncode != 0 or start == -1 or end < start:
+        raise RuntimeError(
+            f"ffmpeg loudnorm produced no measurement for {path} "
+            f"(exit {proc.returncode}): {proc.stderr.strip()[-300:]}")
+    return json.loads(proc.stderr[start:end + 1])
+
+
 def _loudness(path: Path) -> dict:
     proc = subprocess.run(
         ["ffmpeg", "-hide_banner", "-nostats", "-i", str(path),
          "-af", "loudnorm=I=-14:TP=-1:LRA=11:print_format=json", "-f", "null", "-"],
         capture_output=True, text=True,
     )
-    blob = proc.stderr[proc.stderr.rfind("{"): proc.stderr.rfind("}") + 1]
-    data = json.loads(blob)
+    data = _loudnorm_measurement(proc, path)
     return {"input_i": float(data["input_i"]), "input_tp": float(data["input_tp"]),
             "input_lra": float(data["input_lra"])}
 
@@ -247,8 +259,7 @@ def _mono_loudness(path: Path) -> float:
          "-f", "null", "-"],
         capture_output=True, text=True,
     )
-    blob = proc.stderr[proc.stderr.rfind("{"): proc.stderr.rfind("}") + 1]
-    return float(json.loads(blob)["input_i"])
+    return float(_loudnorm_measurement(proc, path)["input_i"])
 
 
 def _audio_channels(path: Path) -> int:
@@ -282,5 +293,12 @@ def _freeze_spans(path: Path, *, threshold_s: float) -> list[float]:
          "-vf", f"freezedetect=n=-60dB:d={threshold_s}", "-map", "0:v", "-f", "null", "-"],
         capture_output=True, text=True,
     )
+    # No freezedetect output means "no freeze" only if ffmpeg actually read the file.
+    # A non-zero exit means it could not, and an empty result would read a broken
+    # master as clean (was part of DEBT-001).
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"ffmpeg freezedetect could not read {path} "
+            f"(exit {proc.returncode}): {proc.stderr.strip()[-300:]}")
     return [float(line.split("freeze_start:")[1].strip())
             for line in proc.stderr.splitlines() if "freeze_start:" in line]

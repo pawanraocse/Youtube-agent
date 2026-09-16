@@ -1,7 +1,13 @@
 """Each deterministic check gets a known-bad fixture it must catch and a
 known-good fixture it must pass. This is the highest-value suite in the repo."""
 
-from studio.checks import check_cohort, check_licences, check_picture, check_script
+import subprocess
+from pathlib import Path
+
+import pytest
+
+from studio.checks import (_loudnorm_measurement, check_cohort, check_licences,
+                           check_picture, check_script)
 from studio.core.config import Format
 
 FMT = Format.load("data-explainer")
@@ -68,3 +74,12 @@ def test_cohort_verdicts():
     assert v["spike"][0] == "extend"
     assert v["alive"][0] == "keep"
     assert v["young"][0] == "too_early"
+
+
+def test_a_failed_loudnorm_probe_names_the_file_not_a_json_error():
+    """DEBT-001: a failed encode must raise an error naming the master, not a
+    JSONDecodeError on an empty stderr slice that looks like a broken check."""
+    proc = subprocess.CompletedProcess(
+        args=[], returncode=1, stdout="", stderr="master.mp4: Invalid data found")
+    with pytest.raises(RuntimeError, match="broken.mp4"):
+        _loudnorm_measurement(proc, Path("broken.mp4"))

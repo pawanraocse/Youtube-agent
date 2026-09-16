@@ -251,7 +251,10 @@ def _check_critique(score: dict, pack: Pack) -> list[Finding]:
     weighted = sum(score["dimensions"][d] * rubric["dimensions"][d]["weight"] for d in expected)
     if abs(weighted - score["total"]) > 0.5:
         out.append(Finding("rubric", f"total {score['total']} is not the weighted sum {weighted:.1f}"))
+    # Threshold the recomputed sum, not the agent's claimed total: the 0.5 above is a
+    # rounding allowance on the consistency check, not a pass margin. Otherwise a critic
+    # could claim 80.0 on dimensions that weight to 79.5 and round itself into a pass.
     threshold = float(rubric.get("pass_threshold", 80))
-    if score["total"] < threshold:
-        out.append(Finding("score", f"{score['total']:.1f} is below the {threshold:.0f} threshold"))
+    if weighted < threshold:
+        out.append(Finding("score", f"{weighted:.1f} is below the {threshold:.0f} threshold"))
     return out

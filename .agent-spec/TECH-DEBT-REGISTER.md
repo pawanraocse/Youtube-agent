@@ -9,7 +9,6 @@
 
 | ID | Date Logged | Component | Description | Severity | Fix Effort | Status |
 |----|-------------|-----------|-------------|----------|------------|--------|
-| `DEBT-001` | 2026-09-12 | `studio/checks/__init__.py` | `_loudness`, `_mono_loudness` and `_freeze_spans` (lines 232, 244, 280 after the DEBT-003 fix) call `subprocess.run` without `check=True`, then parse stderr for a JSON blob. A failed FFmpeg surfaces as `JSONDecodeError` on an empty slice, so a broken probe is indistinguishable from a bad master. Observed live on 2026-09-12 while probing a file FFmpeg had failed to build: the traceback pointed at `json.loads`, not at the encode that actually failed. | MEDIUM | Low | OPEN |
 | `DEBT-002` | 2026-09-12 | `studio/pipeline.py`, `studio/__main__.py` | Four call sites reach into `store.conn.execute` directly instead of going through a `Store` method, leaking SQL past the boundary the rest of the code keeps clean. | LOW | Low | OPEN |
 
 ## Resolved Debt
@@ -17,6 +16,7 @@
 | ID | Date Resolved | Component | Resolution |
 |----|---------------|-----------|------------|
 | `DEBT-000` | YYYY-MM-DD | `AuthFilter` | Replaced custom JWT validation with standard Spring Security OAuth2 resource server library. |
+| `DEBT-001` | 2026-09-16 | `studio/checks/__init__.py` | The three FFmpeg analysis probes no longer swallow failure. `_loudness` and `_mono_loudness` route stderr through a shared `_loudnorm_measurement`, which raises a `RuntimeError` naming the file when the JSON block is absent or the encode exited non-zero; `_freeze_spans` raises on a non-zero exit rather than reporting a broken master as freeze-free. They still parse stderr rather than using `check=True`, because loudnorm exits 0 and writes its measurement there — the swallowing, not the stderr-parsing, was the defect. Covered by `tests/test_checks.py::test_a_failed_loudnorm_probe_names_the_file_not_a_json_error`. |
 
 ---
 

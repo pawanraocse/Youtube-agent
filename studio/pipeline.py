@@ -77,10 +77,15 @@ class Context:
 # --------------------------------------------------------------------------
 
 def a1_validate(ctx: Context) -> Path:
+    # Score by the same formula ingest applies in briefs._score_demand, so the mock
+    # and the real path never disagree on what niche_score means.
+    rpm, density, volume = 8.0, 0.4, 20000
+    rpgh = rpm * volume / 1000 / max(ctx.fmt.gpu_budget_hours, 0.01)
     return ctx.write_json("demand.json", {
         "topic": ctx.topic, "rights_verdict": "clear",
-        "projected_rpm": 8.0, "competition_density": 0.4, "demand_volume": 20000,
-        "niche_score": round(8.0 * 20000 * (1 / 0.4) / 1000, 1),
+        "projected_rpm": rpm, "competition_density": density, "demand_volume": volume,
+        "revenue_per_gpu_hour": round(rpgh, 1),
+        "niche_score": round(rpgh * (1 - density), 1),
         "angle": f"The part of {ctx.topic} nobody explains",
     })
 

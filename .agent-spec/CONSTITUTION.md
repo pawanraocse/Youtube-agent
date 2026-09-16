@@ -88,10 +88,11 @@ opinion. (`checks/__init__.py`.)
 non-conforming files with FFmpeg rather than asserting against mocks.
 
 **Every `subprocess.run` passes `capture_output=True`, and every *producing* call also
-passes `check=True`.** 10 call sites, 7 with `check=True`. A failing FFmpeg must raise
-rather than leave a silent empty file behind. The 3 exceptions are the analysis probes in
-`checks/__init__.py` (`_loudness`, `_mono_loudness`, `_freeze_spans`), which parse stderr
-instead — see §5, this is debt rather than a convention.
+passes `check=True`.** A failing FFmpeg must raise rather than leave a silent empty file
+behind. The 3 analysis probes in `checks/__init__.py` (`_loudness`, `_mono_loudness`,
+`_freeze_spans`) parse stderr instead of using `check=True`, because loudnorm exits 0 and
+writes its measurement to stderr — but they raise a clear error naming the file when the
+encode fails, rather than swallowing it (DEBT-001, resolved 2026-09-16).
 
 **Errors propagate.** One broad `except` exists in the codebase, in
 `core/state.py:step`, and it records the failure to the step ledger and re-raises. There
@@ -129,10 +130,6 @@ is no swallowing anywhere.
 
 ## 5. Known debt
 
-- **Three FFmpeg analysis probes swallow failure.** `checks/__init__.py:168,180,204` call
-  `subprocess.run` without `check=True` and then parse stderr for a JSON blob. If FFmpeg
-  fails, the caller sees a `JSONDecodeError` on an empty slice rather than the real error,
-  which makes a bad master look like a broken check. Logged as `DEBT-001`.
 - **SQL leaks outside `core/`.** `pipeline.py` (3 sites) and `__main__.py` (1 site) call
   `store.conn.execute` directly rather than going through a `Store` method. The boundary
   is otherwise clean; these four should become named methods.

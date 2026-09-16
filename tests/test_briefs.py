@@ -177,6 +177,14 @@ def test_a_score_below_threshold_is_a_finding_not_a_pass(tmp_path):
     assert any(f.check == "score" for f in findings)
 
 
+def test_a_total_rounded_up_into_the_threshold_is_caught_by_the_weighted_sum(tmp_path):
+    # factual_fidelity 67.5 weights the sum to exactly 79.5; claiming 80.0 sits inside
+    # the 0.5 consistency tolerance, so the gate must threshold the recomputed sum.
+    _, findings = _validate(Stage.B4_SCRIPT_REVIEW,
+                            _score(total=80.0, factual_fidelity=67.5), tmp_path)
+    assert any(f.check == "score" for f in findings)
+
+
 def test_the_critique_never_completes_the_gate_step():
     """A critique is an input to a lock, not the lock's completion. If ingest
     recorded B4 as done, the next walk would skip the gate and LOCK 1 would open
