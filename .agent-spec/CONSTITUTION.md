@@ -106,9 +106,16 @@ is no swallowing anywhere.
   reason: FLUX.1-dev, XTTS-v2, MusicGen, HunyuanVideo, Edge TTS. Also Wav2Lip, whose
   weights are research-only. `check_licences` fails on any of them, and fails on a
   weight that is merely unverified.
-- **Never generate music.** The library is downloaded once from CC0 and public-domain
-  sources and tagged with per-platform clearance. YouTube Audio Library terms do not
-  carry to Facebook, Instagram or TikTok.
+- **Generate music only with a model verified for commercial use; otherwise use a free
+  library whose licence allows it.** Decided 2026-09-15 (D-6 in
+  `.agent-spec/sdlc/01-REQUIREMENTS.md`), replacing "never generate music" once a free,
+  commercially licensed local model was found. ACE-Step 1.5 (MIT) is the first choice and
+  Stable Audio 3 (Stability AI Community License, free under $1M a year) the second;
+  MusicGen, YuE2 and the MuQ-MuLan encoder are non-commercial. A model is usable only once
+  `licenses.yaml` records it with a human `verified_on`. Library tracks must permit
+  commercial use, and carry per-platform clearance — YouTube Audio Library terms do not
+  carry to Facebook, Instagram or TikTok. Altering or remixing a track never changes who
+  owns it.
 - **Never copy code from the reference repositories.** They are read for design lessons
   only; one of the five has no licence file at all. (plan §Reference repositories.)
 - **No `print()` in library code**, no bare `except`, no swallowed exceptions.

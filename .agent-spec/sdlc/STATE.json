@@ -1,0 +1,16 @@
+{
+  "feature": "story-to-video-creator",
+  "gate": 0,
+  "gate_name": "REQUIREMENTS",
+  "artifacts": {
+    "01-REQUIREMENTS.md": "2026-09-15T19:47:08"
+  },
+  "history": [
+    {
+      "gate": 0,
+      "name": "REQUIREMENTS",
+      "at": "2026-09-15T19:47:08"
+    }
+  ],
+  "updated": "2026-09-15T19:47:08"
+}
